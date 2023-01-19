@@ -1,0 +1,18 @@
+.-img .my-flex-box {
+	z-index: 100;
+}
+.-img:after {
+	content: " ";
+    background-color: #393c4b;
+    position: absolute;
+    left: 0;
+    right: 0;
+	height: 540px;
+	z-index: 1;
+}
+
+@media (max-width: 460px) {
+.-img:after {
+	height: 940px;
+}
+}
