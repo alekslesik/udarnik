@@ -605,3 +605,7 @@ div.widget-contacts-container {
 div.widget-contacts-container span {
     font-weight: 700;
 }
+
+.widget-contacts-container .intec-grid-item-auto span.adress {
+    font-weight: normal;
+}
