@@ -601,3 +601,7 @@ div.widget-contacts-container > a > span {
 div.widget-contacts-container {
     color: #ffffff;
 }
+
+div.widget-contacts-container span {
+    font-weight: 700;
+}
