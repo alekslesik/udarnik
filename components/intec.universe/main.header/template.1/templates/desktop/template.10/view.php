@@ -35,7 +35,7 @@ $arVisual = $arResult['VISUAL'];
         <span class="workhours">
             <span class="value-title" title="<?= $sScheduleString ?>"></span>
         </span>
-    <?php
+        <?php
         unset($sScheduleString);
     } ?>
 
@@ -54,7 +54,8 @@ $arVisual = $arResult['VISUAL'];
                                     'intec-ui-picture'
                                 ],
                                 'style' => [
-                                    'width' => $arResult['LOGOTYPE']['DESKTOP']['WIDTH'] . 'px'
+//                                    'width' => $arResult['LOGOTYPE']['DESKTOP']['WIDTH'] . 'px'
+                                    'width' => '300px'
                                 ]
                             ]) ?>
                             <?php include(__DIR__ . '/../../../parts/logotype.php') ?>
@@ -77,7 +78,6 @@ $arVisual = $arResult['VISUAL'];
                             </div>
                         </div>
                     <?php } ?>
-                    <div class="intec-grid-item"></div>
                     <?php
                     $url = $_SERVER['REQUEST_URI'];
                     $url = explode('?', $url);
@@ -85,32 +85,41 @@ $arVisual = $arResult['VISUAL'];
                     ?>
                     <?php if ($arResult['CONTACTS']['SHOW']['DESKTOP'] || $arResult['FORMS']['CALL']['SHOW']) { ?>
                         <div class="widget-information-container intec-grid-item-auto" style="flex: 1 0 auto;">
-                            <div class="intec-grid intec-grid-a-v-center intec-grid-i-h-8" style="display: flex; align-content: center; justify-content: space-around;">
+                            <div class="intec-grid intec-grid-a-v-center intec-grid-i-h-8"
+                                 style="display: flex; align-content: center; justify-content: space-around;">
+
+                                <!--                                phone-->
+                                <div class="widget-contacts-container intec-grid-item-auto phone">
+                                    <?php if ($arResult['CONTACTS']['ADVANCED']) { ?>
+                                        <?php foreach ($arResult['CONTACTS']['SELECTED'] as $arContactItem) { ?>
+                                            <?php if (!empty($arContactItem['PHONE']['DISPLAY'])) { ?>
+                                                <i class="fa-solid fa-phone"></i>
+                                                <a href="tel:<?= $arContactItem['PHONE']['VALUE'] ?>" class="tel">
+                                                    <span class="value"><?= $arContactItem['PHONE']['DISPLAY'] ?></span>
+                                                </a>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    <?php } else { ?>
+                                        <?php foreach ($arResult['CONTACTS']['SELECTED'] as $arContactItem) { ?>
+                                            <i class="fa-solid fa-phone"></i>
+                                            <a href="tel:<?= $arContactItem['PHONE']['VALUE'] ?>" class="tel">
+                                                <span class="value"><?= $arContactItem['PHONE']['DISPLAY'] ?></span>
+                                            </a>
+                                        <?php } ?>
+                                    <?php } ?>
+                                </div>
+
+                                <!--                                adress, worktime-->
                                 <?php if ($arResult['CONTACTS']['SHOW']['DESKTOP']) {
                                     include(__DIR__ . '/parts/contacts.php');
                                 } ?>
-                                <?php if ($arResult['FORMS']['CALL']['SHOW']) { ?>
-                                    <div hidden class="widget-call-container intec-grid-item-auto">
-                                        <?= Html::tag('div', Loc::getMessage('C_HEADER_TEMP1_DESKTOP_TEMP10_BUTTON'), [
-                                            'class' => [
-                                                'widget-call',
-                                                'intec-cl-text'
-                                            ],
-                                            'data-action' => 'forms.call.open'
-                                        ]) ?>
-                                        <?php include(__DIR__ . '/../../../parts/forms/call.php') ?>
-                                    </div>
-                                <?php } ?>
+                                <!--                                phone, mail-->
+                                <!--                                main page-->
                                 <?php if ($url == "/") { ?>
                                     <div class="widget-contacts-container intec-grid-item-auto" style="color: #ffffff;">
-                                        <div style="margin-bottom: 5px;">
-                                            <i class="fa-solid fa-phone" style="margin-right: 7px; color:#7cc842"></i>
-                                            <a style="color: #7cc842; font-weight: 700; font-size: 1.1em;" href="tel:<?= $arContactItem['PHONE']['VALUE'] ?>" class="tel">
-                                                <span class="value"><?= $arContactItem['PHONE']['DISPLAY'] ?></span>
-                                            </a>
-                                        </div>
+                                        <!--                                        mail-->
                                         <div class="wrapper" style="display: flex; align-items: center;">
-                                            <i class="fa-solid fa-envelope" style="margin-right: 7px; color:#7cc842"></i>
+                                            <i class="fa-solid fa-envelope"></i>
                                             <div class="adress" style="display: inline-block;">
                                                 <div class="adress">Юридическим лицам</div>
                                                 <a style="color: #7cc842" href="mailto:<?= $arContactItem["EMAIL"] ?>">
@@ -119,20 +128,17 @@ $arVisual = $arResult['VISUAL'];
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!--                                    element page-->
                                 <?php } else { ?>
-                                    <div class="widget-contacts-container intec-grid-item-auto" style="color: #000000;">
-                                        <div style="margin-bottom: 5px;">
-                                            <i class="fa-solid fa-phone" style="margin-right: 7px; color:#7cc842"></i>
-                                            <a style="color: #7cc842; font-weight: 700; font-size: 1.1em;" href="tel:<?= $arContactItem['PHONE']['VALUE'] ?>" class="tel">
-                                                <span class="value"><?= $arContactItem['PHONE']['DISPLAY'] ?></span>
-                                            </a>
-                                        </div>
+                                    <div class="widget-contacts-container intec-grid-item-auto" style="color: #ffffff;">
                                         <div class="wrapper" style="display: flex; align-items: center;">
-                                            <i class="fa-solid fa-envelope" style="margin-right: 7px; color:#7cc842"></i>
+                                            <i class="fa-solid fa-envelope"></i>
                                             <div class="adress" style="display: inline-block;">
                                                 <div class="adress">Юридическим лицам</div>
-                                                <a style="color: #7cc842" href="mailto:<?= $arContactItem["EMAIL"] ?>">
-                                                    <span class="value"><?= $arContactItem["EMAIL"] ?></span>
+                                                <a style="color: #7cc842; font-weight: bold"
+                                                   href="mailto:<?= $arContactItem["EMAIL"] ?>">
+                                                    <span class="value"><b><?= $arContactItem["EMAIL"] ?></b></span>
                                                 </a>
                                             </div>
                                         </div>
@@ -141,6 +147,7 @@ $arVisual = $arResult['VISUAL'];
                             </div>
                         </div>
                     <?php } ?>
+
                     <?php if ($arResult['SEARCH']['SHOW']['DESKTOP']) { ?>
                         <div class="widget-search-container intec-grid-item-auto" hidden>
                             <div class="widget-search">
@@ -170,17 +177,17 @@ $arVisual = $arResult['VISUAL'];
         </div>
     </div>
     <?php if ($arVisual['TRANSPARENCY']) { ?>
-        <div class="intec-content intec-content-primary intec-content-visible">
-            <div class="intec-content-wrapper">
+    <div class="intec-content intec-content-primary intec-content-visible">
+        <div class="intec-content-wrapper">
             <?php } ?>
             <div class="widget-menu">
                 <?php $arMenuParams = ['TRANSPARENT' => 'N'] ?>
                 <?php include(__DIR__ . '/../../../parts/menu/main.horizontal.1.php') ?>
             </div>
             <?php if ($arVisual['TRANSPARENCY']) { ?>
-            </div>
         </div>
-    <?php } ?>
+    </div>
+<?php } ?>
     <?php //$APPLICATION->ShowViewContent('template-header-desktop-after')
     ?>
 </div>
