@@ -41,13 +41,13 @@ $arVisual = $arResult['VISUAL'];
                     <div class="intec-grid intec-grid-wrap intec-grid-a-v-center intec-grid-i-8">
                         <?php if ($arBlocks['HEADER']['SHOW']) { ?>
                             <div class="intec-grid-item">
-                                <?= Html::tag('div', Html::encode($arBlocks['HEADER']['TEXT']), [
+                                <b><?= Html::tag('div', Html::encode($arBlocks['HEADER']['TEXT']), [
                                     'class' => [
                                         'widget-title',
                                         'align-'.$arBlocks['HEADER']['POSITION'],
                                         $arBlocks['FOOTER']['BUTTON']['SHOW'] ? 'widget-title-margin' : null
                                     ]
-                                ]) ?>
+                                ]) ?></b>
                             </div>
                             <?php if ($arBlocks['FOOTER']['BUTTON']['SHOW']) { ?>
                                 <?= Html::beginTag('div', [
