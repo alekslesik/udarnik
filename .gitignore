@@ -1,1 +1,4 @@
 .vscode/sftp.json
+/.idea/deployment.xml
+/.idea/sshConfigs.xml
+/.idea/webServers.xml
