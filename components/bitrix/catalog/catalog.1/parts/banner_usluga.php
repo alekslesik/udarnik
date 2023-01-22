@@ -3,6 +3,7 @@
     <div class="my-flex-box-img">
         <h1>
             <?= $arSection["UF_BANNER_HEADER"] ?>
+
         </h1>
         <ul>
             <li>
