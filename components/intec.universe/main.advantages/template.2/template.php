@@ -27,7 +27,7 @@ $iCount = 0;
                 <div class="widget-header">
                     <?php if ($arBlocks['HEADER']['SHOW']) { ?>
                         <div class="widget-title align-<?= $arBlocks['HEADER']['POSITION'] ?>">
-                            <?= Html::encode($arBlocks['HEADER']['TEXT']) ?>
+                            <b><?= Html::encode($arBlocks['HEADER']['TEXT']) ?></b>
                         </div>
                     <?php } ?>
                     <?php if ($arBlocks['DESCRIPTION']['SHOW']) { ?>
@@ -112,7 +112,7 @@ $iCount = 0;
                                 <?php } else { ?>
                                     <div class="widget-element-counter">
                                 <div class="wrapper-widget-element-counter">
-                                    <?= $iCount . '.' ?>
+                                    <?= $iCount ?>
                                 </div>
                             </div>
                                 <?php } ?>
