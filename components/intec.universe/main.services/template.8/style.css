@@ -79,6 +79,7 @@
   display: none;
   font-size: 18px;
 }
+
 @media all and (max-width: 550px) {
   .widget.c-services.c-services-template-8 .widget-all-container {
     display: block;
@@ -124,6 +125,13 @@
   .widget.c-services.c-services-template-8 .widget-item-text {
     margin: 10px 15px 10px 10px;
   }
+}
+
+.intec-template .widget .widget .widget-footer.align-left,
+.intec-template .widget .widget-header .widget-description.align-left,
+.intec-template .widget .widget-header .widget-title.align-left {
+  text-align: left;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

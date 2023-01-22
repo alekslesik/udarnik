@@ -810,6 +810,40 @@ $APPLICATION->SetTitle("Ремонт");
     <br>
     <br>
     <br>
+    <div>
+        <?$APPLICATION->IncludeComponent(
+            "intec.universe:main.services",
+            "template.8",
+            Array(
+                "CACHE_TIME" => "0",
+                "CACHE_TYPE" => "A",
+                "COLUMNS" => "2",
+                "DESCRIPTION_BLOCK_SHOW" => "N",
+                "DESCRIPTION_USE" => "Y",
+                "DETAIL_URL" => "",
+                "ELEMENTS_COUNT" => "4",
+                "FOOTER_SHOW" => "N",
+                "HEADER_BLOCK_POSITION" => "left",
+                "HEADER_BLOCK_SHOW" => "Y",
+                "HEADER_BLOCK_TEXT" => "ПОЧЕМУ НАМ ДОВЕРЯЮТ",
+                "IBLOCK_ID" => "20",
+                "IBLOCK_TYPE" => "catalogs",
+                "INDENT_IMAGE_USE" => "N",
+                "LAZYLOAD_USE" => "N",
+                "LINK_USE" => "N",
+                "LIST_PAGE_URL" => "",
+                "ORDER_BY" => "ASC",
+                "SECTIONS" => array("",""),
+                "SECTION_URL" => "",
+                "SETTINGS_USE" => "Y",
+                "SORT_BY" => "SORT"
+            )
+        );?>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="intec-ui-p-t-5">
         <?$APPLICATION->IncludeComponent(
             "intec.universe:main.reviews",
