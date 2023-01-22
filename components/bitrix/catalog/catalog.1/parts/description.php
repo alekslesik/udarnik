@@ -15,7 +15,6 @@
         justify-content: center;
         background-color: #393c4b;
         color: #ffffff;
-        margin-top: 80px;
         padding-bottom: 80px;
         width: 107%;
     }
@@ -31,7 +30,10 @@
     .my-flex-box:nth-child(1) {
         flex: 0 1 65%;
         margin-right: 40px;
-        margin-top: 80px;
+        margin-top: 35px;
+        color: #7cc842;
+        font-weight: bold;
+        font-size: 17px;
     }
 
     .my-flex-box:nth-child(2) {
@@ -77,6 +79,9 @@
             flex: 0 1 65%;
             margin-right: 40px;
             margin-top: 40px;
+            color: #7cc842;
+            font-weight: bold;
+            font-size: 17px;
         }
 
         .my-flex-box-img:nth-child(2) {

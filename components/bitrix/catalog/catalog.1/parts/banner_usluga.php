@@ -17,24 +17,18 @@
                 </p>
             </li>
         </ul>
+        <div class="my-flex-cont-icons">
+            <div class="my-flex-box-icons my-flex-box-cash">
+                <div class="my-flex-box-description">Наличные или карта для физичечких лиц.</div>
+            </div>
+            <div class="my-flex-box-icons my-flex-box-card">
+                <div class="my-flex-box-description">Безналичная оплата для юридических лиц</div>
+            </div>
+        </div>
     </div>
     <div class="my-flex-box-img">
         <? $sPicture = CFile::GetPath($arSection['PICTURE']); ?>
         <img src="<?= $sPicture ?>" alt="">
-    </div>
-</div>
-
-<div class="my-flex-cont-icons">
-    <div class="my-flex-box-icons my-flex-box-cash">
-        <div class="my-flex-box-description">Наличные или карта для физичечких лиц.</div>
-    </div>
-    <div class="my-flex-box-icons my-flex-box-card">
-        <div class="my-flex-box-description">Безналичная оплата для юридических лиц</div>
-    </div>
-    <div class="my-flex-box-icons">
-        <img class="flex-social" src="/local/templates/universe_s1/icons/whatsapp.png" alt="">
-        <img class="flex-social" src="/local/templates/universe_s1/icons/youtube.png" alt="">
-        <img class="flex-social" src="/local/templates/universe_s1/icons/instagram.png" alt="">
     </div>
 </div>
 
@@ -58,6 +52,7 @@
         justify-content: space-between;
         align-items: end;
         height: 65px;
+        width: 76%;
     }
 
     .my-flex-box-icons {
@@ -122,12 +117,13 @@
         justify-content: space-between;
         align-items: stretch;
         color: #393c4b;
+        margin-bottom: 27px;
     }
 
     .my-flex-box-img {
         flex: 0 1 auto;
         align-self: center;
-        width: 25%;
+        width: 29%;
     }
 
     .my-flex-box-img:nth-child(1) {
@@ -137,7 +133,7 @@
     .my-flex-box-img:nth-child(2) {}
 
     .my-flex-box-img img {
-        max-width: 280px;
+        max-width: 390px;
     }
 
     .my-flex-box-img li {
@@ -146,9 +142,10 @@
 
     .my-flex-box-img li p {
         margin-left: 40px;
-        width: 80%;
+        width: 90%;
         font-size: 21px;
         line-height: 28px;
+        font-weight: bold;
     }
 
     .my-flex-box-img li:before {
