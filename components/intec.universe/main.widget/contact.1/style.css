@@ -16,25 +16,35 @@
 .widget.c-widget.c-widget-contact-1 .widget-block-wrapper {
   display: block;
   max-width: 405px;
-  padding: 50px 115px 65px 40px;
+  padding: 35px 50px 65px 60px;
   margin: 0;
-  background: #fff;
+  background: #393c4b;
   visibility: visible;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 .widget.c-widget.c-widget-contact-1 .widget-block-wrapper-2 {
   display: block;
 }
+
+hr.dark {
+  border: 1px solid #2B2F32;
+}
 .widget.c-widget.c-widget-contact-1 .widget-block-title {
   display: block;
-  font-weight: 500;
-  font-size: 30px;
+  font-weight: bold;
+  font-size: 17px;
   line-height: 37px;
-  color: #1B1E25;
+  color: white;
   margin-bottom: 24px;
 }
+
+.widget-block-item.widget-block-item-address > div {
+  color: white;
+}
+
 .widget.c-widget.c-widget-contact-1 .widget-block-items {
   display: block;
 }
@@ -54,7 +64,6 @@
   font-weight: normal;
   line-height: 14px;
   letter-spacing: 1px;
-  color: #808080;
   margin-bottom: 8px;
 }
 .widget.c-widget.c-widget-contact-1 .widget-block-item-value {
@@ -62,10 +71,15 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #404040;
 }
+
+.widget.c-widget.c-widget-contact-1 .widget-block-item-value.parking  {
+  color: #7BC841;
+  font-weight: bold;
+}
+
 .widget.c-widget.c-widget-contact-1 .widget-block-item-value a {
-  color: inherit;
+  color: #7BC841;
   text-decoration: none;
   -webkit-transition-duration: 350ms;
   -moz-transition-duration: 350ms;
@@ -77,7 +91,14 @@
   -ms-transition-property: color;
   -o-transition-property: color;
   transition-property: color;
+  font-weight: bold;
 }
+
+div.widget-block-item  i {
+  color: #7BC841;
+  padding-right: 5px;
+}
+
 .widget.c-widget.c-widget-contact-1 .widget-block-item-value a:hover {
   color: #0065ff;
 }

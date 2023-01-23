@@ -45,9 +45,44 @@ $sTemplateId = Html::getUniqueId(null, Component::getUniqueId($this));
                             </div>
                         <?php } ?>
                         <div class="widget-block-items">
+                            <hr class="dark">
+                            <?php if ($arResult['PHONE']['SHOW']) { ?>
+                                <div class="widget-block-item widget-block-item-phone">
+<!--                                    <div class="widget-block-item-title">-->
+<!--                                        --><?php //= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_PHONE') ?><!--:-->
+<!--                                    </div>-->
+                                    <?php foreach ($arResult['PHONE']['VALUES'] as $arPhone) { ?>
+                                        <div class="widget-block-item-value">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <?= Html::tag('a', $arPhone['DISPLAY'], [
+                                                'class' => 'intec-cl-text-hover',
+                                                'href' => 'tel:'.$arPhone['VALUE']
+                                            ]) ?>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            <?php } ?>
+                            <?php if ($arResult['EMAIL']['SHOW']) { ?>
+                                <div class="widget-block-item widget-block-item-email">
+<!--                                    <div class="widget-block-item-title">-->
+<!--                                        --><?php //= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_EMAIL') ?><!--:-->
+<!--                                    </div>-->
+                                    <?php foreach ($arResult['EMAIL']['VALUES'] as $sEmail) { ?>
+                                        <div class="widget-block-item-value">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <?= Html::tag('a', $sEmail, [
+                                                'class' => 'intec-cl-text-hover',
+                                                'href' => 'mailto:'.$sEmail
+                                            ]) ?>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            <?php } ?>
+                            <hr class="dark">
                             <?php if ($arResult['ADDRESS']['SHOW']) { ?>
                                 <div class="widget-block-item widget-block-item-address">
                                     <div class="widget-block-item-title">
+                                        <i class="fa-solid fa-location-dot"></i>
                                         <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_ADDRESS') ?>:
                                     </div>
                                     <?php if (!empty($arResult['ADDRESS']['CITY'])) { ?>
@@ -57,39 +92,13 @@ $sTemplateId = Html::getUniqueId(null, Component::getUniqueId($this));
                                     <?php } ?>
                                     <?php if (!empty($arResult['ADDRESS']['STREET'])) { ?>
                                         <div class="widget-block-item-value">
+                                            м. Дмитровская <br>
                                             <?= $arResult['ADDRESS']['STREET'] ?>
                                         </div>
                                     <?php } ?>
-                                </div>
-                            <?php } ?>
-                            <?php if ($arResult['EMAIL']['SHOW']) { ?>
-                                <div class="widget-block-item widget-block-item-email">
-                                    <div class="widget-block-item-title">
-                                        <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_EMAIL') ?>:
+                                    <div class="widget-block-item-value parking">
+                                        <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_PARKING') ?>
                                     </div>
-                                    <?php foreach ($arResult['EMAIL']['VALUES'] as $sEmail) { ?>
-                                        <div class="widget-block-item-value">
-                                            <?= Html::tag('a', $sEmail, [
-                                                'class' => 'intec-cl-text-hover',
-                                                'href' => 'mailto:'.$sEmail
-                                            ]) ?>
-                                        </div>
-                                    <?php } ?>
-                                </div>
-                            <?php } ?>
-                            <?php if ($arResult['PHONE']['SHOW']) { ?>
-                                <div class="widget-block-item widget-block-item-phone">
-                                    <div class="widget-block-item-title">
-                                        <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_PHONE') ?>:
-                                    </div>
-                                    <?php foreach ($arResult['PHONE']['VALUES'] as $arPhone) { ?>
-                                        <div class="widget-block-item-value">
-                                            <?= Html::tag('a', $arPhone['DISPLAY'], [
-                                                'class' => 'intec-cl-text-hover',
-                                                'href' => 'tel:'.$arPhone['VALUE']
-                                            ]) ?>
-                                        </div>
-                                    <?php } ?>
                                 </div>
                             <?php } ?>
                             <?php if ($arResult['FORM']['SHOW']) { ?>

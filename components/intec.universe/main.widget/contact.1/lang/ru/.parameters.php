@@ -38,6 +38,7 @@ $MESS['C_MAIN_WIDGET_CONTACT_1_EMAIL_VALUES'] = 'Эл. почта';
 $MESS['C_MAIN_WIDGET_CONTACT_1_PROPERTY_MAP'] = 'Свойство "Место на карте"';
 $MESS['C_MAIN_WIDGET_CONTACT_1_PROPERTY_CITY'] = 'Свойство "Город"';
 $MESS['C_MAIN_WIDGET_CONTACT_1_PROPERTY_STREET'] = 'Свойство "Улица, дом"';
+$MESS['C_MAIN_WIDGET_CONTACT_1_PROPERTY_WORK_TIME'] = 'Свойство "Режим работы"';
 $MESS['C_MAIN_WIDGET_CONTACT_1_PROPERTY_PHONE'] = 'Свойство "Номер телефона"';
 $MESS['C_MAIN_WIDGET_CONTACT_1_PROPERTY_EMAIL'] = 'Свойство "Эл. почта"';
 $MESS['C_MAIN_WIDGET_CONTACT_1_MAIN'] = 'Элемент инфоблока';

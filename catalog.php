@@ -844,6 +844,28 @@ $APPLICATION->SetTitle("Ремонт");
     <br>
     <br>
     <br>
+    <div>
+        <?$APPLICATION->IncludeComponent(
+            "intec.universe:widget",
+            "web.form.2",
+            Array(
+                "BUTTON" => "",
+                "CACHE_TIME" => "0",
+                "CACHE_TYPE" => "A",
+                "CONSENT_URL" => "/company/consent/",
+                "DESCRIPTION" => "",
+                "FORM" => "",
+                "GRAB_DATA" => "N",
+                "TITLE" => "",
+                "WEB_FORM_ID" => "2",
+                "WEB_FORM_TEMPLATE" => ".default"
+            )
+        );?>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="intec-ui-p-t-5">
         <?$APPLICATION->IncludeComponent(
             "intec.universe:main.reviews",

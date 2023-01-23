@@ -366,6 +366,14 @@ if ($arCurrentValues['BLOCK_SHOW'] == 'Y') {
                 'ADDITIONAL_VALUES' => 'Y'
             ];
 
+            $arTemplateParameters['PROPERTY_WORK_TIME'] = [
+                'PARENT' => 'DATA_SOURCE',
+                'NAME' => Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_PROPERTY_WORK_TIME'),
+                'TYPE' => 'LIST',
+                'VALUES' => $hPropertiesString,
+                'ADDITIONAL_VALUES' => 'Y'
+            ];
+
             if ($arCurrentValues['ADDRESS_SHOW'] == 'Y') {
                 $arTemplateParameters['PROPERTY_CITY'] = [
                     'PARENT' => 'DATA_SOURCE',
