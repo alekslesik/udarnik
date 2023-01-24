@@ -5,17 +5,9 @@
             <?= $arSection["UF_BANNER_HEADER"] ?>
         </h1>
         <ul>
-            <li>
-                <p>Диагностика длится 1-3 дня в зависимости от загруженности мастера</p>
-            </li>
-            <li>
-                <p>Стоимость диагностики <?= $arSection["UF_INSTR"] ?> <?= $arSection["UF_AMOUNT"] ?> р. в случае отказа от ремонта</p>
-            </li>
-            <li>
-                <p>
-                    Срок ремонта <?= $arSection["UF_INSTR"] ?> зависит от наличия запчастей, и начинается на этапе диагностики
-                </p>
-            </li>
+            <li><p>Диагностика длится 1-3 дня в зависимости от загруженности мастера</p></li>
+            <li><p>Стоимость диагностики <?= $arSection["UF_INSTR"] ?> <?= $arSection["UF_AMOUNT"] ?> р. в случае отказа от ремонта</p></li>
+            <li><p>Срок ремонта <?= $arSection["UF_INSTR"] ?> зависит от наличия запчастей, и начинается на этапе диагностики</p></li>
         </ul>
         <div class="my-flex-cont-icons">
             <div class="my-flex-box-icons my-flex-box-cash">
@@ -87,12 +79,12 @@
     }
 
     .my-flex-box-cash::before {
-        content: url('/local/templates/universe_s1/icons/money.png');
+        content: url('/local/templates/universe_s1/icons/iko1.png');
         margin-right: 30px;
     }
 
     .my-flex-box-card::before {
-        content: url('/local/templates/universe_s1/icons/money.png');
+        content: url('/local/templates/universe_s1/icons/iko1.png');
         margin-right: 30px
     }
 

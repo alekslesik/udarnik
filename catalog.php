@@ -1,17 +1,17 @@
-<?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 $APPLICATION->SetTitle("Ремонт");
 
-?><?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+?><?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 $APPLICATION->SetTitle("Ремонт");
 
 ?>
     <div>
-        <?$APPLICATION->IncludeComponent(
+        <? $APPLICATION->IncludeComponent(
             "bitrix:catalog",
             "catalog.1",
-            Array(
+            array(
                 "ACTION_VARIABLE" => "action",
                 "ADDITIONAL_ARTICLES_SHOW" => "N",
                 "ADD_ELEMENT_CHAIN" => "Y",
@@ -46,12 +46,12 @@ $APPLICATION->SetTitle("Ремонт");
                 "COMPARE_ACTION" => "none",
                 "COMPARE_ELEMENT_SORT_FIELD" => "sort",
                 "COMPARE_ELEMENT_SORT_ORDER" => "asc",
-                "COMPARE_FIELD_CODE" => array("",""),
+                "COMPARE_FIELD_CODE" => array("", ""),
                 "COMPARE_LAZYLOAD_USE" => "N",
                 "COMPARE_NAME" => "compare",
-                "COMPARE_OFFERS_FIELD_CODE" => array("",""),
+                "COMPARE_OFFERS_FIELD_CODE" => array("", ""),
                 "COMPARE_OFFERS_PROPERTY_CODE" => array("OFFERS_SIZE"),
-                "COMPARE_PROPERTY_CODE" => array("PROPERTY_WEIGTH","PROPERTY_DISPLAY","PROPERTY_LENGTH","PROPERTY_SYSTEM_ADDITIONAL","PROPERTY_QUANTITY_OF_STRIPS","PROPERTY_POWER","PROPERTY_SETTINGS","PROPERTY_SCOPE","PROPERTY_PROCREATOR","PROPERTY_SEASON","PROPERTY_SYSTEM_RELATED_SERVICES","PROPERTY_COMPOSITION","PROPERTY_PROPERTY_TEST","PROPERTY_TYPE","PROPERTY_PATTERN","PROPERTY_ENERGY_CONSUMPTION"),
+                "COMPARE_PROPERTY_CODE" => array("PROPERTY_WEIGTH", "PROPERTY_DISPLAY", "PROPERTY_LENGTH", "PROPERTY_SYSTEM_ADDITIONAL", "PROPERTY_QUANTITY_OF_STRIPS", "PROPERTY_POWER", "PROPERTY_SETTINGS", "PROPERTY_SCOPE", "PROPERTY_PROCREATOR", "PROPERTY_SEASON", "PROPERTY_SYSTEM_RELATED_SERVICES", "PROPERTY_COMPOSITION", "PROPERTY_PROPERTY_TEST", "PROPERTY_TYPE", "PROPERTY_PATTERN", "PROPERTY_ENERGY_CONSUMPTION"),
                 "COMPATIBLE_MODE" => "Y",
                 "COMPOSITE_FRAME_MODE" => "A",
                 "COMPOSITE_FRAME_TYPE" => "AUTO",
@@ -137,7 +137,7 @@ $APPLICATION->SetTitle("Ремонт");
                 "DETAIL_META_DESCRIPTION" => "-",
                 "DETAIL_META_KEYWORDS" => "-",
                 "DETAIL_OFFERS_EXPANDED" => "Y",
-                "DETAIL_OFFERS_FIELD_CODE" => array("",""),
+                "DETAIL_OFFERS_FIELD_CODE" => array("", ""),
                 "DETAIL_OFFERS_NAME" => "",
                 "DETAIL_OFFERS_PROPERTIES_COUNT" => "3",
                 "DETAIL_OFFERS_PROPERTIES_DELIMITER" => ",",
@@ -191,7 +191,7 @@ $APPLICATION->SetTitle("Ремонт");
                 "DETAIL_PROPERTY_ACCESSORIES" => "",
                 "DETAIL_PROPERTY_ADVANTAGES" => "",
                 "DETAIL_PROPERTY_ARTICLES" => "",
-                "DETAIL_PROPERTY_CODE" => array("PROPERTY_WEIGTH","PROPERTY_DISPLAY","PROPERTY_LENGTH","PROPERTY_SYSTEM_ADDITIONAL","PROPERTY_QUANTITY_OF_STRIPS","PROPERTY_POWER","PROPERTY_SETTINGS","PROPERTY_SCOPE","PROPERTY_PROCREATOR","PROPERTY_SEASON","PROPERTY_SYSTEM_RELATED_SERVICES","PROPERTY_COMPOSITION","PROPERTY_PROPERTY_TEST","PROPERTY_TYPE","PROPERTY_PATTERN","PROPERTY_ENERGY_CONSUMPTION"),
+                "DETAIL_PROPERTY_CODE" => array("PROPERTY_WEIGTH", "PROPERTY_DISPLAY", "PROPERTY_LENGTH", "PROPERTY_SYSTEM_ADDITIONAL", "PROPERTY_QUANTITY_OF_STRIPS", "PROPERTY_POWER", "PROPERTY_SETTINGS", "PROPERTY_SCOPE", "PROPERTY_PROCREATOR", "PROPERTY_SEASON", "PROPERTY_SYSTEM_RELATED_SERVICES", "PROPERTY_COMPOSITION", "PROPERTY_PROPERTY_TEST", "PROPERTY_TYPE", "PROPERTY_PATTERN", "PROPERTY_ENERGY_CONSUMPTION"),
                 "DETAIL_PROPERTY_TAB_META_BROWSER_TITLE" => "",
                 "DETAIL_PROPERTY_TAB_META_CHAIN" => "",
                 "DETAIL_PROPERTY_TAB_META_DESCRIPTION" => "",
@@ -220,12 +220,12 @@ $APPLICATION->SetTitle("Ремонт");
                 "DETAIL_REVIEWS_NAVIGATION_USE" => "N",
                 "DETAIL_REVIEWS_ORDER_BY" => "DESC",
                 "DETAIL_REVIEWS_PICTURE_SHOW" => "N",
-                "DETAIL_REVIEWS_PROPERTIES_DISPLAY" => array("EMAIL","RATING","DIGNITY","FLAWS","COMMENT",""),
+                "DETAIL_REVIEWS_PROPERTIES_DISPLAY" => array("EMAIL", "RATING", "DIGNITY", "FLAWS", "COMMENT", ""),
                 "DETAIL_REVIEWS_PROPERTIES_DISPLAY_RATING" => "RATING",
                 "DETAIL_REVIEWS_PROPERTIES_RATING_USE" => "Y",
                 "DETAIL_REVIEWS_PROPERTIES_SHOW" => "Y",
-                "DETAIL_REVIEWS_PROPERTY_FORM_FIELDS" => array("EMAIL","DIGNITY","FLAWS","COMMENT","RATING",""),
-                "DETAIL_REVIEWS_PROPERTY_FORM_REQUIRED" => array("EMAIL","RATING",""),
+                "DETAIL_REVIEWS_PROPERTY_FORM_FIELDS" => array("EMAIL", "DIGNITY", "FLAWS", "COMMENT", "RATING", ""),
+                "DETAIL_REVIEWS_PROPERTY_FORM_REQUIRED" => array("EMAIL", "RATING", ""),
                 "DETAIL_REVIEWS_PROPERTY_RATING" => "RATING",
                 "DETAIL_REVIEWS_RATING_USE" => "Y",
                 "DETAIL_REVIEWS_SHOW" => "Y",
@@ -315,17 +315,17 @@ $APPLICATION->SetTitle("Ремонт");
                 "ELEMENT_SORT_FIELD2" => "id",
                 "ELEMENT_SORT_ORDER" => "asc",
                 "ELEMENT_SORT_ORDER2" => "desc",
-                "FIELDS" => array("TITLE","ADDRESS","DESCRIPTION","PHONE","SCHEDULE","EMAIL",),
+                "FIELDS" => array("TITLE", "ADDRESS", "DESCRIPTION", "PHONE", "SCHEDULE", "EMAIL",),
                 "FILE_404" => "/404.php",
                 "FILTER_AJAX" => "N",
                 "FILTER_COLLAPSED" => "N",
-                "FILTER_FIELD_CODE" => array("",""),
+                "FILTER_FIELD_CODE" => array("", ""),
                 "FILTER_NAME" => "arrFilter",
-                "FILTER_OFFERS_FIELD_CODE" => array("",""),
-                "FILTER_OFFERS_PROPERTY_CODE" => array("","OFFERS_SIZE",""),
+                "FILTER_OFFERS_FIELD_CODE" => array("", ""),
+                "FILTER_OFFERS_PROPERTY_CODE" => array("", "OFFERS_SIZE", ""),
                 "FILTER_PRICES_EXPANDED" => array(),
                 "FILTER_PRICE_CODE" => array("BASE"),
-                "FILTER_PROPERTY_CODE" => array("PROPERTY_TYPE","PROPERTY_QUANTITY_OF_STRIPS","PROPERTY_POWER","PROPERTY_PROCREATOR","PROPERTY_SCOPE","PROPERTY_DISPLAY","PROPERTY_WEIGTH","PROPERTY_ENERGY_CONSUMPTION","PROPERTY_SETTINGS","PROPERTY_COMPOSITION","PROPERTY_LENGTH","PROPERTY_SEASON","PROPERTY_PATTERN","PROPERTY_SYSTEM_ADDITIONAL","PROPERTY_SYSTEM_RELATED_SERVICES","PROPERTY_PROPERTY_TEST",""),
+                "FILTER_PROPERTY_CODE" => array("PROPERTY_TYPE", "PROPERTY_QUANTITY_OF_STRIPS", "PROPERTY_POWER", "PROPERTY_PROCREATOR", "PROPERTY_SCOPE", "PROPERTY_DISPLAY", "PROPERTY_WEIGTH", "PROPERTY_ENERGY_CONSUMPTION", "PROPERTY_SETTINGS", "PROPERTY_COMPOSITION", "PROPERTY_LENGTH", "PROPERTY_SEASON", "PROPERTY_PATTERN", "PROPERTY_SYSTEM_ADDITIONAL", "PROPERTY_SYSTEM_RELATED_SERVICES", "PROPERTY_PROPERTY_TEST", ""),
                 "FILTER_SEARCH_SHOW" => "Y",
                 "FILTER_SEARCH_SHOW_MODE" => "quantity",
                 "FILTER_SEARCH_SHOW_QUANTITY" => "8",
@@ -423,10 +423,10 @@ $APPLICATION->SetTitle("Ремонт");
                 "LIST_LIST_VOTE_SHOW" => "Y",
                 "LIST_META_DESCRIPTION" => "-",
                 "LIST_META_KEYWORDS" => "-",
-                "LIST_OFFERS_FIELD_CODE" => array("",""),
+                "LIST_OFFERS_FIELD_CODE" => array("", ""),
                 "LIST_OFFERS_LIMIT" => "0",
                 "LIST_OFFERS_PROPERTY_CODE" => array("OFFERS_SIZE"),
-                "LIST_PROPERTY_CODE" => array("PROPERTY_WEIGTH","PROPERTY_DISPLAY","PROPERTY_LENGTH","PROPERTY_SYSTEM_ADDITIONAL","PROPERTY_QUANTITY_OF_STRIPS","PROPERTY_POWER","PROPERTY_SETTINGS","PROPERTY_SCOPE","PROPERTY_PROCREATOR","PROPERTY_SEASON","PROPERTY_SYSTEM_RELATED_SERVICES","PROPERTY_COMPOSITION","PROPERTY_PROPERTY_TEST","PROPERTY_TYPE","PROPERTY_PATTERN","PROPERTY_ENERGY_CONSUMPTION"),
+                "LIST_PROPERTY_CODE" => array("PROPERTY_WEIGTH", "PROPERTY_DISPLAY", "PROPERTY_LENGTH", "PROPERTY_SYSTEM_ADDITIONAL", "PROPERTY_QUANTITY_OF_STRIPS", "PROPERTY_POWER", "PROPERTY_SETTINGS", "PROPERTY_SCOPE", "PROPERTY_PROCREATOR", "PROPERTY_SEASON", "PROPERTY_SYSTEM_RELATED_SERVICES", "PROPERTY_COMPOSITION", "PROPERTY_PROPERTY_TEST", "PROPERTY_TYPE", "PROPERTY_PATTERN", "PROPERTY_ENERGY_CONSUMPTION"),
                 "LIST_ROOT_SHOW" => "N",
                 "LIST_SORT_PRICE" => "1",
                 "LIST_TEXT_ACTION" => "buy",
@@ -599,7 +599,7 @@ $APPLICATION->SetTitle("Ремонт");
                 "QUICK_VIEW_MARKS_SHOW" => "Y",
                 "QUICK_VIEW_PAYMENT_URL" => "/help/buys/payment/",
                 "QUICK_VIEW_PROPERTIES_SHOW" => "N",
-                "QUICK_VIEW_PROPERTY_CODE" => array("PROPERTY_TYPE","PROPERTY_QUANTITY_OF_STRIPS","PROPERTY_POWER","PROPERTY_PROCREATOR","PROPERTY_SCOPE","PROPERTY_DISPLAY","PROPERTY_WEIGTH","PROPERTY_ENERGY_CONSUMPTION","PROPERTY_SETTINGS","PROPERTY_COMPOSITION","PROPERTY_LENGTH","PROPERTY_SEASON","PROPERTY_PATTERN","PROPERTY_SYSTEM_ADDITIONAL","PROPERTY_SYSTEM_RELATED_SERVICES","PROPERTY_PROPERTY_TEST",""),
+                "QUICK_VIEW_PROPERTY_CODE" => array("PROPERTY_TYPE", "PROPERTY_QUANTITY_OF_STRIPS", "PROPERTY_POWER", "PROPERTY_PROCREATOR", "PROPERTY_SCOPE", "PROPERTY_DISPLAY", "PROPERTY_WEIGTH", "PROPERTY_ENERGY_CONSUMPTION", "PROPERTY_SETTINGS", "PROPERTY_COMPOSITION", "PROPERTY_LENGTH", "PROPERTY_SEASON", "PROPERTY_PATTERN", "PROPERTY_SYSTEM_ADDITIONAL", "PROPERTY_SYSTEM_RELATED_SERVICES", "PROPERTY_PROPERTY_TEST", ""),
                 "QUICK_VIEW_PROPERTY_DESCRIPTION" => "",
                 "QUICK_VIEW_PROPERTY_TEXT" => "",
                 "QUICK_VIEW_QUANTITY_SHOW" => "Y",
@@ -677,7 +677,7 @@ $APPLICATION->SetTitle("Ремонт");
                 "SEF_FOLDER" => "/catalog/",
                 "SEF_MODE" => "Y",
                 "SEF_TABS_USE" => "N",
-                "SEF_URL_TEMPLATES" => Array("compare"=>"compare.php?action=#ACTION_CODE#","element"=>"#SECTION_CODE#/#ELEMENT_ID#/","section"=>"#SECTION_CODE#/","sections"=>"","smart_filter"=>"#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/"),
+                "SEF_URL_TEMPLATES" => array("compare" => "compare.php?action=#ACTION_CODE#", "element" => "#SECTION_CODE#/#ELEMENT_ID#/", "section" => "#SECTION_CODE#/", "sections" => "", "smart_filter" => "#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/"),
                 "SERVICES_IBLOCK_ID" => "20",
                 "SERVICES_IBLOCK_TYPE" => "catalogs",
                 "SERVICES_PROPERTY_PRICE" => "PRICE",
@@ -692,7 +692,7 @@ $APPLICATION->SetTitle("Ремонт");
                 "SHOW_PRICE_COUNT" => "1",
                 "SHOW_SKU_DESCRIPTION" => "N",
                 "SHOW_TOP_ELEMENTS" => "N",
-                "STORES" => array("",""),
+                "STORES" => array("", ""),
                 "STORE_BLOCK_DESCRIPTION_USE" => "N",
                 "STORE_PATH" => "",
                 "TAGS_USE" => "N",
@@ -714,69 +714,65 @@ $APPLICATION->SetTitle("Ремонт");
                 "USE_PRODUCT_QUANTITY" => "N",
                 "USE_REVIEW" => "N",
                 "USE_STORE" => "N",
-                "VARIABLE_ALIASES" => array("compare"=>array("ACTION_CODE"=>"action",),),
+                "VARIABLE_ALIASES" => array("compare" => array("ACTION_CODE" => "action",),),
                 "VIDEO_IBLOCK_ID" => "40",
                 "VIDEO_IBLOCK_TYPE" => "content",
                 "VIDEO_PROPERTY_URL" => "LINK",
                 "VOTE_MODE" => "rating"
             )
-        );?>
+        ); ?>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-<?$APPLICATION->IncludeComponent(
-    "intec.universe:main.advantages",
-    "template.2",
-    Array(
-        "BACKGROUND_COLOR" => "#F4F4F4",
-        "BACKGROUND_SHOW" => "Y",
-        "CACHE_TIME" => "0",
-        "CACHE_TYPE" => "A",
-        "COLUMNS" => "5",
-        "COMPONENT_TEMPLATE" => "template.2",
-        "DESCRIPTION" => "",
-        "DESCRIPTION_POSITION" => "center",
-        "DESCRIPTION_SHOW" => "N",
-        "ELEMENTS_COUNT" => "4",
-        "HEADER" => "КАК МЫ РАБОТАЕМ",
-        "HEADER_POSITION" => "left",
-        "HEADER_SHOW" => "Y",
-        "IBLOCK_ID" => "9",
-        "IBLOCK_TYPE" => "content",
-        "LAZYLOAD_USE" => "N",
-        "LINE_COUNT" => "4",
-        "LINK_PROPERTY_USE" => "N",
-        "LINK_USE" => "N",
-        "MOBILE_COLUMNS" => "2",
-        "NAME_ALIGN" => "center",
-        "NAME_SHOW" => "Y",
-        "ORDER_BY" => "ASC",
-        "PICTURE_ALIGN" => "center",
-        "PICTURE_POSITION" => "top",
-        "PICTURE_SHOW" => "Y",
-        "PREVIEW_ALIGN" => "center",
-        "PREVIEW_SHOW" => "Y",
-        "PROPERTY_SVG_FILE" => "ICON",
-        "SECTIONS" => array(0=>"",1=>"",),
-        "SECTIONS_MODE" => "id",
-        "SETTINGS_USE" => "Y",
-        "SORT_BY" => "SORT",
-        "SVG_FILE_USE" => "Y",
-        "THEME" => "light",
-        "TITLE_POSITION" => "top",
-        "VIEW" => "number"
-    )
-);?><br>
-    <br>
-    <br>
-    <br>
-    <div>
-        <?$APPLICATION->IncludeComponent(
+    <div class="container-345" style="margin: 0px auto 0px auto; padding: 60px 40px 90px 40px; background-color: #F4F4F4;">
+        <? $APPLICATION->IncludeComponent(
+            "intec.universe:main.advantages",
+            "template.2",
+            array(
+                "BACKGROUND_COLOR" => "#F4F4F4",
+                "BACKGROUND_SHOW" => "Y",
+                "CACHE_TIME" => "0",
+                "CACHE_TYPE" => "A",
+                "COLUMNS" => "5",
+                "COMPONENT_TEMPLATE" => "template.2",
+                "DESCRIPTION" => "",
+                "DESCRIPTION_POSITION" => "center",
+                "DESCRIPTION_SHOW" => "N",
+                "ELEMENTS_COUNT" => "4",
+                "HEADER" => "КАК МЫ РАБОТАЕМ",
+                "HEADER_POSITION" => "left",
+                "HEADER_SHOW" => "Y",
+                "IBLOCK_ID" => "9",
+                "IBLOCK_TYPE" => "content",
+                "LAZYLOAD_USE" => "N",
+                "LINE_COUNT" => "4",
+                "LINK_PROPERTY_USE" => "N",
+                "LINK_USE" => "N",
+                "MOBILE_COLUMNS" => "2",
+                "NAME_ALIGN" => "center",
+                "NAME_SHOW" => "Y",
+                "ORDER_BY" => "ASC",
+                "PICTURE_ALIGN" => "center",
+                "PICTURE_POSITION" => "top",
+                "PICTURE_SHOW" => "Y",
+                "PREVIEW_ALIGN" => "center",
+                "PREVIEW_SHOW" => "Y",
+                "PROPERTY_SVG_FILE" => "ICON",
+                "SECTIONS" => array(0 => "", 1 => "",),
+                "SECTIONS_MODE" => "id",
+                "SETTINGS_USE" => "Y",
+                "SORT_BY" => "SORT",
+                "SVG_FILE_USE" => "Y",
+                "THEME" => "light",
+                "TITLE_POSITION" => "top",
+                "VIEW" => "number"
+            )
+        ); ?>
+    </div>
+
+    <div class="container-345" style="margin: 0px auto 0px auto; padding: 60px 40px 90px 40px;">
+        <? $APPLICATION->IncludeComponent(
             "intec.universe:main.brands",
             "template.1",
-            Array(
+            array(
                 "ALIGNMENT" => "center",
                 "CACHE_TIME" => "0",
                 "CACHE_TYPE" => "A",
@@ -796,7 +792,7 @@ $APPLICATION->SetTitle("Ремонт");
                 "LINK_USE" => "N",
                 "LIST_PAGE_URL" => "",
                 "ORDER_BY" => "ASC",
-                "SECTIONS" => array(0=>"",1=>"",),
+                "SECTIONS" => array(0 => "", 1 => "",),
                 "SECTIONS_MODE" => "id",
                 "SECTION_URL" => "",
                 "SETTINGS_USE" => "Y",
@@ -804,17 +800,13 @@ $APPLICATION->SetTitle("Ремонт");
                 "SORT_BY" => "SORT",
                 "TRANSPARENCY" => "0"
             )
-        );?>
+        ); ?>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>
-        <?$APPLICATION->IncludeComponent(
+    <div class="container-345" style="margin: 0px auto 0px auto; padding: 60px 40px 90px 40px; background-color: #F4F4F4;">
+        <? $APPLICATION->IncludeComponent(
             "intec.universe:main.services",
             "template.8",
-            Array(
+            array(
                 "CACHE_TIME" => "0",
                 "CACHE_TYPE" => "A",
                 "COLUMNS" => "2",
@@ -833,22 +825,18 @@ $APPLICATION->SetTitle("Ремонт");
                 "LINK_USE" => "N",
                 "LIST_PAGE_URL" => "",
                 "ORDER_BY" => "ASC",
-                "SECTIONS" => array("",""),
+                "SECTIONS" => array("", ""),
                 "SECTION_URL" => "",
                 "SETTINGS_USE" => "Y",
                 "SORT_BY" => "SORT"
             )
-        );?>
+        ); ?>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>
-        <?$APPLICATION->IncludeComponent(
+    <div class="container-345">
+    <? $APPLICATION->IncludeComponent(
             "intec.universe:widget",
             "web.form.2",
-            Array(
+            array(
                 "BUTTON" => "",
                 "CACHE_TIME" => "0",
                 "CACHE_TYPE" => "A",
@@ -860,17 +848,13 @@ $APPLICATION->SetTitle("Ремонт");
                 "WEB_FORM_ID" => "2",
                 "WEB_FORM_TEMPLATE" => ".default"
             )
-        );?>
+        ); ?>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="intec-ui-p-t-5">
-        <?$APPLICATION->IncludeComponent(
+    <div class="container-345" style="margin: 0px auto 0px auto; padding: 60px 40px 90px 40px;">
+    <? $APPLICATION->IncludeComponent(
             "intec.universe:main.reviews",
             "template.13",
-            Array(
+            array(
                 "ACTIVE_DATE_FORMAT" => "d.m.Y",
                 "ACTIVE_DATE_SHOW" => "Y",
                 "BUTTON_ALL_SHOW" => "Y",
@@ -895,7 +879,7 @@ $APPLICATION->SetTitle("Ремонт");
                 "PREVIEW_TRUNCATE_USE" => "N",
                 "PROPERTY_RATING" => "RATING",
                 "RATING_SHOW" => "Y",
-                "SECTIONS" => array(0=>"",1=>"",),
+                "SECTIONS" => array(0 => "", 1 => "",),
                 "SECTIONS_MODE" => "id",
                 "SECTION_URL" => "",
                 "SEND_USE" => "N",
@@ -904,22 +888,18 @@ $APPLICATION->SetTitle("Ремонт");
                 "SLIDER_LOOP" => "Y",
                 "SORT_BY" => "SORT"
             )
-        );?>
+        ); ?>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="intec-ui-p-t-5">
-        <?$APPLICATION->IncludeComponent(
+    <div class="container-345">
+    <? $APPLICATION->IncludeComponent(
             "bitrix:main.include",
             "",
-            Array(
+            array(
                 "AREA_FILE_SHOW" => "file",
                 "AREA_FILE_SUFFIX" => "inc",
                 "EDIT_TEMPLATE" => "",
                 "PATH" => "/include/index/wide/contacts/simple.1.php"
             )
-        );?>
+        ); ?>
     </div>
-    <br><?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php") ?>
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php") ?>
