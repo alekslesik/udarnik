@@ -1,12 +1,13 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
-<div class="-img">
-    <div class="my-flex-box">
-        <?= $arDescription['VALUE'] ?>
+    <div class="-img">
+        <div class="my-flex-box">
+            <?= $arDescription['VALUE'] ?>
+        </div>
+        <div class="my-flex-box">
+            <?= $arSection["UF_TABLE"] ?>
+        </div>
     </div>
-    <div class="my-flex-box">
-        <?= $arSection["UF_TABLE"] ?>
-    </div>
-</div>
+
 
 <style>
     /* Made by cssworld.ru */
@@ -61,8 +62,7 @@
 
     table.iksweb td,
     table.iksweb th {
-        border-bottom: 1px solid dimgray;
-        ;
+        border-bottom: 1px solid dimgray;;
         /* text-align: left; */
         height: 36px;
     }
@@ -73,7 +73,7 @@
         text-align: right;
     }
 
-@media (max-width: 720px) {
+    @media (max-width: 720px) {
 
         .my-flex-box:nth-child(1) {
             flex: 0 1 65%;
