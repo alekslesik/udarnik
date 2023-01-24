@@ -48,3 +48,11 @@
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    .intec-grid > .intec-grid-item-768-1 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
