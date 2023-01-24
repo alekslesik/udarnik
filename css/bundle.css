@@ -19151,7 +19151,7 @@ body[data-scroll="false"] {
 
 .intec-template .intec-template-layout-page-wrapper {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .intec-template .intec-template-layout-content {
