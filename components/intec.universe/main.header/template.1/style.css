@@ -10,7 +10,7 @@
   right: 0;
   bottom: auto;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 .c-header.c-header-template-1 [data-role=header-mobile-region-select] .menu-region-question {
   position: relative;
@@ -44,7 +44,7 @@
 .c-header.c-header-template-1 .widget-view.widget-view-mobile {
   display: none;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
 }
 .c-header.c-header-template-1 .widget-banner {
   display: block;
