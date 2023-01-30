@@ -513,4 +513,12 @@
   }
 }
 
+.widget-banner.intec-content {
+  margin-top: 0px !important;
+}
+
+.widget-item-content {
+  padding-top: 0px !important;
+}
+
 /*# sourceMappingURL=style.css.map */

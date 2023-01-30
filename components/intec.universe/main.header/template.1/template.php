@@ -358,7 +358,7 @@ $this->setFrameMode(true);
             </script>
         <?php } ?>
         <?php if (!empty($arTemplates['BANNER'])) { ?>
-            <div class="widget-banner">
+            <div class="widget-banner intec-content" style="margin-top: 0px;">
                 <?php $arData['type'] = 'BANNER' ?>
                 <?= $arTemplates['BANNER']->render(
                     $arParams,
