@@ -16,7 +16,7 @@ $sTemplateId = $arData['id'];
 $arVisual = $arResult['VISUAL'];
 
 ?>
-<div class="widget-view-desktop-10">
+<div class="widget-view-desktop-10" style="background-color: #4f5368;">
     <?php if ($arResult['CONTACTS']['ADVANCED']) { ?>
         <?php $sScheduleString = ''; ?>
         <?php foreach ($arResult['CONTACTS']['VALUES'] as $arContact) {
@@ -177,7 +177,8 @@ $arVisual = $arResult['VISUAL'];
         </div>
     </div>
     <?php if ($arVisual['TRANSPARENCY']) { ?>
-    <div class="intec-content intec-content-primary intec-content-visible">
+<!--    <div class="intec-content intec-content-primary intec-content-visible">-->
+    <div class="widget-menu">
         <div class="intec-content-wrapper">
             <?php } ?>
             <div class="widget-menu">
