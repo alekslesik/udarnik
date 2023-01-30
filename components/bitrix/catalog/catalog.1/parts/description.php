@@ -31,7 +31,7 @@
     .my-flex-box:nth-child(1) {
         flex: 0 1 65%;
         margin-right: 40px;
-        margin-top: 35px;
+        margin-top: 60px;
         color: #7cc842;
         font-weight: bold;
         font-size: 17px;

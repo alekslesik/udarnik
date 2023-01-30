@@ -79,28 +79,30 @@ $sTemplateId = Html::getUniqueId(null, Component::getUniqueId($this));
                                 </div>
                             <?php } ?>
                             <hr class="dark">
-                            <?php if ($arResult['ADDRESS']['SHOW']) { ?>
-                                <div class="widget-block-item widget-block-item-address">
-                                    <div class="widget-block-item-title">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_ADDRESS') ?>:
-                                    </div>
-                                    <?php if (!empty($arResult['ADDRESS']['CITY'])) { ?>
-                                        <div class="widget-block-item-value">
-                                            <?= $arResult['ADDRESS']['CITY'] ?>
+                            <div class="flex-wrap">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <?php if ($arResult['ADDRESS']['SHOW']) { ?>
+                                    <div class="widget-block-item widget-block-item-address">
+                                        <div class="widget-block-item-title">
+                                            <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_ADDRESS') ?>:
                                         </div>
-                                    <?php } ?>
-                                    <?php if (!empty($arResult['ADDRESS']['STREET'])) { ?>
-                                        <div class="widget-block-item-value">
-                                            м. Дмитровская <br>
-                                            <?= $arResult['ADDRESS']['STREET'] ?>
+                                        <?php if (!empty($arResult['ADDRESS']['CITY'])) { ?>
+                                            <div class="widget-block-item-value">
+                                                <?= $arResult['ADDRESS']['CITY'] ?>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if (!empty($arResult['ADDRESS']['STREET'])) { ?>
+                                            <div class="widget-block-item-value">
+                                                м. Дмитровская <br>
+                                                <?= $arResult['ADDRESS']['STREET'] ?>
+                                            </div>
+                                        <?php } ?>
+                                        <div class="widget-block-item-value parking">
+                                            <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_PARKING') ?>
                                         </div>
-                                    <?php } ?>
-                                    <div class="widget-block-item-value parking">
-                                        <?= Loc::getMessage('C_MAIN_WIDGET_CONTACT_1_PARKING') ?>
                                     </div>
-                                </div>
-                            <?php } ?>
+                                <?php } ?>
+                            </div>
                             <?php if ($arResult['FORM']['SHOW']) { ?>
                             <div class="widget-block-item widget-block-item-form">
                                 <?= Html::tag('div', $arResult['FORM']['BUTTON']['TEXT'], [
