@@ -267,6 +267,8 @@
 .c-slider.c-slider-template-3 .widget-block-wrapper {
   display: block;
   text-decoration: none;
+  border: 1px solid #e7e2de;
+  margin: 1px;
 }
 .c-slider.c-slider-template-3 .widget-block-picture {
   background-size: cover;
