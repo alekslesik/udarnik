@@ -48,7 +48,7 @@
   display: block;
   text-decoration: none;
   position: relative;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f8f9fb;
@@ -93,8 +93,8 @@
   color: #000;
 }
 .c-slider.c-slider-template-3 .widget-item-header[data-view="1"] {
-  font-size: 34px;
-  line-height: 40px;
+  font-size: 45px;
+  line-height: 55px;
   font-weight: 400;
 }
 .c-slider.c-slider-template-3 .widget-item-header[data-view="2"] {
@@ -149,8 +149,8 @@
   max-height: 112px;
 }
 .c-slider.c-slider-template-3 .widget-item-description[data-view="5"] {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 29px;
   margin-top: 16px;
   max-height: 96px;
 }
@@ -171,6 +171,7 @@
   -ms-transition-property: background-color;
   -o-transition-property: background-color;
   transition-property: background-color;
+  background-color: #7bc841 !important;
 }
 .c-slider.c-slider-template-3 .widget-item-buttons[data-view="1"] {
   margin-top: 32px;
@@ -728,7 +729,7 @@
   .c-slider.c-slider-template-3 [data-item-scheme=white] .widget-item-over,
 .c-slider.c-slider-template-3 [data-item-scheme=white] .widget-item-header,
 .c-slider.c-slider-template-3 [data-item-scheme=white] .widget-item-description {
-    color: #fff;
+    color: #2b2f32;
   }
   .c-slider.c-slider-template-3 [data-item-scheme=white] .widget-item-product .catalog-element-name,
 .c-slider.c-slider-template-3 [data-item-scheme=white] .widget-item-product .widget-time-header,
@@ -758,7 +759,7 @@
   .c-slider.c-slider-template-3 [data-mobile-separated=false] [data-item-scheme=white] .widget-item-over,
 .c-slider.c-slider-template-3 [data-mobile-separated=false] [data-item-scheme=white] .widget-item-header,
 .c-slider.c-slider-template-3 [data-mobile-separated=false] [data-item-scheme=white] .widget-item-description {
-    color: #fff;
+    color: #2b2f32;
   }
   .c-slider.c-slider-template-3 [data-mobile-separated=false] [data-item-scheme=white] .widget-item-product .catalog-element-name,
 .c-slider.c-slider-template-3 [data-mobile-separated=false] [data-item-scheme=white] .widget-item-product .widget-time-header,
@@ -896,5 +897,7 @@
     right: 16px;
   }
 }
+
+
 
 /*# sourceMappingURL=style.css.map */
