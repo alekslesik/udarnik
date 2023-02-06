@@ -271,7 +271,7 @@
   margin: 1px;
 }
 .c-slider.c-slider-template-3 .widget-block-picture {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
