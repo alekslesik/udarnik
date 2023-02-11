@@ -54,7 +54,8 @@ $sTemplateType = $arData['type'];
                 <?php } else { ?>
                     <div class="intec-grid-item intec-grid-item-shrink-1"></div>
                 <?php } ?>
-                <?php if ($arResult['CONTACTS_MOBILE_FORM']['USE']) { ?>
+<!--                --><?php //if ($arResult['CONTACTS_MOBILE_FORM']['USE']) { ?>
+                <?php if (true) { ?>
                     <div class="widget-phone-wrap intec-grid-item-auto">
                         <div class="widget-item widget-phone">
                             <?php include(__DIR__.'/../../../parts/popups/phones.1.php') ?>
@@ -85,6 +86,10 @@ $sTemplateType = $arData['type'];
                 <?php } ?>
             </div>
         </div>
+<!--         TODO add address from arrResult-->
+<!--        <div class="widget-wrapper-2 intec-content-wrapper">-->
+<!--            2222-->
+<!--        </div>-->
     </div>
     <?php //$APPLICATION->ShowViewContent('template-header-mobile-before') ?>
 <?= Html::endTag('div') ?>

@@ -5,7 +5,7 @@
   display: block;
   font-size: 20px;
   font-weight: normal;
-  color: #1d1d1d;
+  color: #FFFFFF;
   line-height: 1;
   cursor: pointer;
   -webkit-transition: color 350ms;
@@ -15,7 +15,7 @@
   transition: color 350ms;
 }
 .ns-bitrix.c-menu.c-menu-mobile-2 .menu-button:hover {
-  color: #0065ff;
+  color: #7bc841;
 }
 .ns-bitrix.c-menu.c-menu-mobile-2 .menu {
   display: none;

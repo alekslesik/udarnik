@@ -37,9 +37,10 @@
 }
 .c-header.c-header-template-1 .widget-view.widget-view-mobile .widget-wrapper {
   position: relative;
+  background-color: #393C4B;
 }
 .c-header.c-header-template-1 .widget-view.widget-view-mobile .widget-item {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 .c-header.c-header-template-1 .widget-view.widget-view-mobile .widget-menu-wrap {
   position: static;
