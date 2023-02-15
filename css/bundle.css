@@ -3483,7 +3483,7 @@ input {
   display: block;
   float: none;
   width: auto;
-  margin-left: 290px;
+  /*margin-left: 290px;*/
 }
 
 .intec-content .intec-content-right-wrapper {
