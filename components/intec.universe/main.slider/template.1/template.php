@@ -89,9 +89,6 @@ $vProduct = include(__DIR__.'/parts/product.php');
                         'data' => [
                             'lazyload-use' => $arVisual['LAZYLOAD']['USE'] ? 'true' : 'false',
                             'original' => $arVisual['LAZYLOAD']['USE'] ? $sPictureMobile : null
-                        ],
-                        'style' => [
-                            'background-image' => !$arVisual['LAZYLOAD']['USE'] ? 'url(\''.$sPictureMobile.'\')' : null
                         ]
                     ]) ?>
                         <?php if ($arData['PICTURE']['SHOW'] && $arVisual['MOBILE']['SEPARATED']['USE']) { ?>

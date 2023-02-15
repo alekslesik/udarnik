@@ -102,9 +102,6 @@ if ($arVisual['BLOCKS']['USE'] && !empty($arResult['BLOCKS']))
                             'data' => [
                                 'lazyload-use' => $arVisual['LAZYLOAD']['USE'] ? 'true' : 'false',
                                 'original' => $arVisual['LAZYLOAD']['USE'] ? $sPictureMobile : null
-                            ],
-                            'style' => [
-                                'background-image' => !$arVisual['LAZYLOAD']['USE'] ? 'url(\''.$sPictureMobile.'\')' : null
                             ]
                         ]) ?>
                         <?php if ($arData['PICTURE']['SHOW'] && $arVisual['MOBILE']['SEPARATED']['USE']) { ?>
@@ -113,10 +110,11 @@ if ($arVisual['BLOCKS']['USE'] && !empty($arResult['BLOCKS']))
                                 'data' => [
                                     'lazyload-use' => $arVisual['LAZYLOAD']['USE'] ? 'true' : 'false',
                                     'original' => $arVisual['LAZYLOAD']['USE'] ? $arData['PICTURE']['VALUE']['SRC'] : null
-                                ],
-                                'style' => [
-                                    'background-image' => !$arVisual['LAZYLOAD']['USE'] ? 'url(\''.$arData['PICTURE']['VALUE']['SRC'].'\')' : null
                                 ]
+//                                ,
+//                                'style' => [
+//                                    'background-image' => !$arVisual['LAZYLOAD']['USE'] ? 'url(\''.$arData['PICTURE']['VALUE']['SRC'].'\')' : null
+//                                ]
                             ]) ?>
                         <?php } ?>
                         <?= Html::endTag($sTag) ?>
