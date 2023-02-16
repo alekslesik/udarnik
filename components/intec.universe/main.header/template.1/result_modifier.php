@@ -77,6 +77,13 @@ $arParams = ArrayHelper::merge([
 
 $arResult['COMPANY_NAME'] = $arParams['COMPANY_NAME'];
 
+// get METRO value from ID 45 universe_contacts_s1 infoblock, ID 352 element
+$rsMetro =  CIBlockElement::GetProperty(45, 352, array("sort" => "asc"),  Array("CODE"=>"METRO"));
+$asMetro = $rsMetro->NavNext();
+$metro = $asMetro["VALUE"];
+
+$arResult['METRO']['VALUE'] = $metro;
+
 $arCodes = [
     'CONTACTS' => [
         'CITY' => $arParams['CONTACTS_PROPERTY_CITY'],
@@ -84,7 +91,8 @@ $arCodes = [
         'EMAIL' => $arParams['CONTACTS_PROPERTY_EMAIL'],
         'PHONE' => $arParams['CONTACTS_PROPERTY_PHONE'],
         'SCHEDULE' => $arParams['CONTACTS_PROPERTY_SCHEDULE'],
-        'ICON' => $arParams['CONTACTS_PROPERTY_ICON']
+        'ICON' => $arParams['CONTACTS_PROPERTY_ICON'],
+        'METRO' => $metro
     ]
 ];
 
@@ -99,8 +107,8 @@ $arResult['CONTACTS_MOBILE_FORM'] = [
 $hDisplay = function ($sKey, $fCondition = null, $sPrefix = '_SHOW') use (&$arParams) {
     $arResult = [
         'DESKTOP' => ArrayHelper::getValue($arParams, $sKey . $sPrefix) == 'Y',
-        'FIXED' => ArrayHelper::getValue($arParams, $sKey . $sPrefix.'_FIXED') == 'Y',
-        'MOBILE' => ArrayHelper::getValue($arParams, $sKey . $sPrefix.'_MOBILE') == 'Y'
+        'FIXED' => ArrayHelper::getValue($arParams, $sKey . $sPrefix . '_FIXED') == 'Y',
+        'MOBILE' => ArrayHelper::getValue($arParams, $sKey . $sPrefix . '_MOBILE') == 'Y'
     ];
 
     if ($fCondition instanceof Closure)
@@ -111,12 +119,12 @@ $hDisplay = function ($sKey, $fCondition = null, $sPrefix = '_SHOW') use (&$arPa
 };
 
 if ($arParams['SETTINGS_USE'] == 'Y')
-    include(__DIR__.'/modifiers/settings.php');
+    include(__DIR__ . '/modifiers/settings.php');
 
 $arMacros = [
     'SITE_DIR' => SITE_DIR,
-    'SITE_TEMPLATE_PATH' => SITE_TEMPLATE_PATH.'/',
-    'TEMPLATE_PATH' => $this->GetFolder().'/'
+    'SITE_TEMPLATE_PATH' => SITE_TEMPLATE_PATH . '/',
+    'TEMPLATE_PATH' => $this->GetFolder() . '/'
 ];
 
 $arResult['REGIONALITY'] = [
@@ -177,11 +185,11 @@ if ($arResult['CONTACTS']['ADVANCED']) {
             if (!empty($oRegion)) {
                 $arConditions = [
                     'LOGIC' => 'OR',
-                    ['PROPERTY_'.$arParams['CONTACTS_PROPERTY_REGION'] => $oRegion->id]
+                    ['PROPERTY_' . $arParams['CONTACTS_PROPERTY_REGION'] => $oRegion->id]
                 ];
 
                 if ($arParams['CONTACTS_REGIONALITY_STRICT'] !== 'Y')
-                    $arConditions[] = ['PROPERTY_'.$arParams['CONTACTS_PROPERTY_REGION'] => false];
+                    $arConditions[] = ['PROPERTY_' . $arParams['CONTACTS_PROPERTY_REGION'] => false];
 
                 $arFilter[] = $arConditions;
             }
@@ -233,7 +241,7 @@ if ($arResult['CONTACTS']['ADVANCED']) {
                                     $sDescription = ArrayHelper::getValue($arProperty, ['DESCRIPTION', $iValueId]);
 
                                     if (!empty($sDescription))
-                                        $sValue[$iValueId] = $sDescription.(!empty($mValue) ? ' '.$mValue : null);
+                                        $sValue[$iValueId] = $sDescription . (!empty($mValue) ? ' ' . $mValue : null);
                                 }
                             }
 
@@ -261,8 +269,8 @@ if ($arResult['CONTACTS']['ADVANCED']) {
 
             if (!empty($arItem['CITY']))
                 $arItem['ADDRESS'] = Loc::getMessage('C_HEADER_TEMP1_CONTACTS_CITY', [
-                        '#CITY#' => $arItem['CITY']
-                    ]).(!empty($arItem['ADDRESS']) ? ', '.$arItem['ADDRESS'] : null);
+                    '#CITY#' => $arItem['CITY']
+                ]) . (!empty($arItem['ADDRESS']) ? ', ' . $arItem['ADDRESS'] : null);
 
             unset($arItem['CITY']);
 
@@ -430,23 +438,23 @@ $arResult['SOCIAL'] = [
 $bSocialShow = false;
 
 foreach ([
-             'VK',
-             'INSTAGRAM',
-             'FACEBOOK',
-             'TWITTER',
-             'YOUTUBE',
-             'ODNOKLASSNIKI',
-             'VIBER',
-             'WHATSAPP',
-             'YANDEX_DZEN',
-             'MAIL_RU',
-             'TELEGRAM',
-             'PINTEREST',
-             'TIKTOK',
-             'SNAPCHAT',
-             'LINKEDIN'
-         ] as $sSocial) {
-    $sValue = ArrayHelper::getValue($arParams, 'SOCIAL_'.$sSocial);
+    'VK',
+    'INSTAGRAM',
+    'FACEBOOK',
+    'TWITTER',
+    'YOUTUBE',
+    'ODNOKLASSNIKI',
+    'VIBER',
+    'WHATSAPP',
+    'YANDEX_DZEN',
+    'MAIL_RU',
+    'TELEGRAM',
+    'PINTEREST',
+    'TIKTOK',
+    'SNAPCHAT',
+    'LINKEDIN'
+] as $sSocial) {
+    $sValue = ArrayHelper::getValue($arParams, 'SOCIAL_' . $sSocial);
     $sCodeSocial = StringHelper::toLowerCase($sSocial);
     $arSocial = [
         'SHOW' => !empty($sValue),
@@ -537,10 +545,10 @@ $arResult['MENU']['MAIN'] = [
 
 $arResult['MENU']['POPUP'] = [
     'TEMPLATE' => ArrayHelper::fromRange([
-            'main.popup.1',
-            'main.popup.2',
-            'main.popup.3',
-        ], $arParams['MENU_POPUP_TEMPLATE']).'.php'
+        'main.popup.1',
+        'main.popup.2',
+        'main.popup.3',
+    ], $arParams['MENU_POPUP_TEMPLATE']) . '.php'
 ];
 
 if ($arParams['BANNER_DISPLAY'] === 'main')
@@ -586,6 +594,8 @@ if (empty($arTemplates['BANNER']))
 
 $arResult['TEMPLATES'] = $arTemplates;
 $arResult['VISUAL'] = $arVisual;
+
+
 
 /** @var InnerTemplate $oTemplate */
 foreach ($arTemplates as $oTemplate) {

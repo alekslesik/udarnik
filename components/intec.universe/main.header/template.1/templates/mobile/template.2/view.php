@@ -17,6 +17,10 @@ use intec\core\net\Url;
 $sTemplateId = $arData['id'];
 $sTemplateType = $arData['type'];
 
+$url = $_SERVER['REQUEST_URI'];
+$url = explode('?', $url);
+$url = $url[0];
+
 ?>
 <?= Html::beginTag('div', [
     'class' => Html::cssClassFromArray([
@@ -27,69 +31,80 @@ $sTemplateType = $arData['type'];
         'intec-cl-background' => $arResult['MOBILE']['FILLED']
     ], true)
 ]) ?>
-    <?php //$APPLICATION->ShowViewContent('template-header-mobile-before') ?>
-    <div class="widget-wrapper intec-content intec-content-visible intec-content-primary">
-        <div class="widget-wrapper-2 intec-content-wrapper">
-            <div class="widget-wrapper-3 intec-grid intec-grid-nowrap intec-grid-i-h-10 intec-grid-a-v-center">
-                <?php if ($arResult['MENU']['MAIN']['SHOW']['MOBILE']) { ?>
-                    <div class="widget-menu-wrap intec-grid-item-auto">
-                        <div class="widget-item widget-menu">
-                            <?php include(__DIR__.'/../../../parts/menu/main.mobile.2.php') ?>
-                        </div>
+<?php //$APPLICATION->ShowViewContent('template-header-mobile-before') 
+?>
+<div class="widget-wrapper intec-content intec-content-visible intec-content-primary">
+    <div class="widget-wrapper-2 intec-content-wrapper">
+        <div class="widget-wrapper-3 intec-grid intec-grid-nowrap intec-grid-i-h-10 intec-grid-a-v-center">
+            <?php if ($arResult['MENU']['MAIN']['SHOW']['MOBILE']) { ?>
+                <div class="widget-menu-wrap intec-grid-item-auto">
+                    <div class="widget-item widget-menu">
+                        <?php include(__DIR__ . '/../../../parts/menu/main.mobile.2.php') ?>
                     </div>
-                <?php } ?>
-                <?php if ($arResult['LOGOTYPE']['SHOW']['MOBILE']) { ?>
-                    <div class="widget-logotype-wrap intec-grid-item intec-grid-item-shrink-1">
-                        <?= Html::beginTag($arResult['LOGOTYPE']['LINK']['USE'] ? 'a' : 'div', [
-                            'href' => $arResult['LOGOTYPE']['LINK']['USE'] ? $arResult['LOGOTYPE']['LINK']['VALUE'] : null,
-                            'class' => [
-                                'widget-item',
-                                'widget-logotype',
-                                'intec-ui-picture'
-                            ]
-                        ]) ?>
-                            <?php include(__DIR__.'/../../../parts/logotype.php') ?>
-                        <?= Html::endTag($arResult['LOGOTYPE']['LINK']['USE'] ? 'a' : 'div') ?>
+                </div>
+            <?php } ?>
+            <?php if ($arResult['LOGOTYPE']['SHOW']['MOBILE']) { ?>
+                <div class="widget-logotype-wrap intec-grid-item intec-grid-item-shrink-1">
+                    <?= Html::beginTag($arResult['LOGOTYPE']['LINK']['USE'] ? 'a' : 'div', [
+                        'href' => $arResult['LOGOTYPE']['LINK']['USE'] ? $arResult['LOGOTYPE']['LINK']['VALUE'] : null,
+                        'class' => [
+                            'widget-item',
+                            'widget-logotype',
+                            'intec-ui-picture'
+                        ]
+                    ]) ?>
+                    <?php include(__DIR__ . '/../../../parts/logotype.php') ?>
+                    <?= Html::endTag($arResult['LOGOTYPE']['LINK']['USE'] ? 'a' : 'div') ?>
+                </div>
+            <?php } else { ?>
+                <div class="intec-grid-item intec-grid-item-shrink-1"></div>
+            <?php } ?>
+            <!--                --><?php //if ($arResult['CONTACTS_MOBILE_FORM']['USE']) { 
+                                    ?>
+            <?php if (true) { ?>
+                <div class="widget-phone-wrap intec-grid-item-auto">
+                    <div class="widget-item widget-phone">
+                        <?php include(__DIR__ . '/../../../parts/popups/phones.1.php') ?>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php if ($arResult['SEARCH']['SHOW']['MOBILE']) { ?>
+                <?php if ($arResult['MOBILE']['SEARCH']['TYPE'] === 'page') { ?>
+                    <?php
+                    $oSearchUrl = new Url($arResult['SEARCH']['MODE'] === 'site' ? $arResult['URL']['SEARCH'] : $arResult['URL']['CATALOG']);
+                    $oSearchUrl->getQuery()->set('q', '');
+                    ?>
+                    <div class="widget-search-wrap intec-grid-item-auto">
+                        <a href="<?= $oSearchUrl->build() ?>" class="widget-item widget-search intec-cl-text-hover">
+                            <i class="glyph-icon-loop"></i>
+                        </a>
                     </div>
                 <?php } else { ?>
-                    <div class="intec-grid-item intec-grid-item-shrink-1"></div>
-                <?php } ?>
-<!--                --><?php //if ($arResult['CONTACTS_MOBILE_FORM']['USE']) { ?>
-                <?php if (true) { ?>
-                    <div class="widget-phone-wrap intec-grid-item-auto">
-                        <div class="widget-item widget-phone">
-                            <?php include(__DIR__.'/../../../parts/popups/phones.1.php') ?>
+                    <div class="widget-search-wrap intec-grid-item-auto">
+                        <div class="widget-item widget-search">
+                            <?php $arSearchParams = [
+                                'INPUT_ID' => $arParams['SEARCH_INPUT_ID'] . '-mobile'
+                            ] ?>
+                            <?php include(__DIR__ . '/../../../parts/search/popup.1.php') ?>
                         </div>
                     </div>
                 <?php } ?>
-                <?php if ($arResult['SEARCH']['SHOW']['MOBILE']) { ?>
-                    <?php if ($arResult['MOBILE']['SEARCH']['TYPE'] === 'page') { ?>
-                        <?php
-                            $oSearchUrl = new Url($arResult['SEARCH']['MODE'] === 'site' ? $arResult['URL']['SEARCH'] : $arResult['URL']['CATALOG']);
-                            $oSearchUrl->getQuery()->set('q', '');
-                        ?>
-                        <div class="widget-search-wrap intec-grid-item-auto">
-                            <a href="<?= $oSearchUrl->build() ?>" class="widget-item widget-search intec-cl-text-hover">
-                                <i class="glyph-icon-loop"></i>
-                            </a>
-                        </div>
-                    <?php } else { ?>
-                        <div class="widget-search-wrap intec-grid-item-auto">
-                            <div class="widget-item widget-search">
-                                <?php $arSearchParams = [
-                                    'INPUT_ID' => $arParams['SEARCH_INPUT_ID'].'-mobile'
-                                ] ?>
-                                <?php include(__DIR__.'/../../../parts/search/popup.1.php') ?>
-                            </div>
-                        </div>
-                    <?php } ?>
-                <?php } ?>
+            <?php } ?>
+        </div>
+    </div>
+
+    <!-- adress on element page only -->
+    <?php if ($url != "/") { ?>
+        <div class="widget-wrapper-2 intec-content-wrapper">
+            <div class="header-address">
+                <?= $arResult["METRO"]["VALUE"] ?>&nbsp;&nbsp;
+                <?= $arResult["ADDRESS"]["VALUE"] ?>
             </div>
         </div>
-<!--         TODO add address from arrResult-->
-<!--        <div class="widget-wrapper-2 intec-content-wrapper">-->
-<!--            2222-->
-<!--        </div>-->
-    </div>
-    <?php //$APPLICATION->ShowViewContent('template-header-mobile-before') ?>
+    <?php } ?>
+
+
+</div>
+<?php //$APPLICATION->ShowViewContent('template-header-mobile-before') 
+?>
 <?= Html::endTag('div') ?>
