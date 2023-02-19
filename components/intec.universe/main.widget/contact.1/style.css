@@ -25,7 +25,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .widget.c-widget.c-widget-contact-1 .widget-block-wrapper-2 {
@@ -45,7 +45,7 @@ hr.dark {
     margin-bottom: 24px;
 }
 
-.widget-block-item.widget-block-item-address > div {
+.widget-block-item.widget-block-item-address>div {
     color: white;
 }
 
@@ -130,7 +130,7 @@ div.widget-block-items i {
     bottom: 0;
 }
 
-.widget.c-widget.c-widget-contact-1 .widget-map .ymaps-controls-lefttop > ymaps {
+.widget.c-widget.c-widget-contact-1 .widget-map .ymaps-controls-lefttop>ymaps {
     left: 50% !important;
     right: auto !important;
     top: auto !important;
@@ -217,7 +217,7 @@ div.widget-block-items i {
     top: auto;
 }
 
-.widget.c-widget.c-widget-contact-1 .widget-map .ymaps-controls-righttop > ymaps {
+.widget.c-widget.c-widget-contact-1 .widget-map .ymaps-controls-righttop>ymaps {
     top: auto !important;
     bottom: 20px !important;
     right: auto !important;
@@ -282,10 +282,20 @@ div.widget-block-items i {
 }
 
 @media all and (max-width: 1000px) {
+    /* .widget.c-widget.c-widget-contact-1 .widget-content,
+    .widget.c-widget.c-widget-contact-1 .widget-content-wrapper,
+    .widget.c-widget.c-widget-contact-1 .widget-content-wrapper-2 {
+        min-height: auto;
+    } */
+
     .widget.c-widget.c-widget-contact-1 .widget-content,
     .widget.c-widget.c-widget-contact-1 .widget-content-wrapper,
     .widget.c-widget.c-widget-contact-1 .widget-content-wrapper-2 {
         min-height: auto;
+        min-height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 
     .widget.c-widget.c-widget-contact-1 .widget-block {
@@ -297,6 +307,7 @@ div.widget-block-items i {
     .widget.c-widget.c-widget-contact-1 .widget-block-wrapper {
         padding: 60px 40px 60px 40px;
         margin: 0 auto;
+        max-width: 100%;
     }
 
     .widget.c-widget.c-widget-contact-1 .widget-map {
