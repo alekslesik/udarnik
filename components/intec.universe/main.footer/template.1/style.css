@@ -50,6 +50,10 @@
   .c-footer.c-footer-template-1[data-theme=dark] {
     background-color: #393c4b;
   }
+
+  .c-footer.c-footer-template-1 .widget-view .widget-view-1 .widget-panel .widget-logotype {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
