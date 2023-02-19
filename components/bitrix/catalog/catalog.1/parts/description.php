@@ -73,19 +73,29 @@
         text-align: right;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 1024px) {
+        .-img {
+            flex-direction: column-reverse;
+            width: 100%;
+        }
+
+        .-img .my-flex-box:nth-child(2) {
+            flex: auto;
+            margin: 45px 0px 0px 125px;
+        }
 
         .my-flex-box:nth-child(1) {
+            margin: 15px 30px 10px 10px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .my-flex-box:nth-child(1) {
             flex: 0 1 65%;
-            margin-right: 40px;
-            margin-top: 40px;
             color: #7cc842;
             font-weight: bold;
             font-size: 17px;
-        }
-
-        .my-flex-box-img:nth-child(2) {
-            display: none;
+            margin: 10px 10px 10px 10px;
         }
 
         .my-flex-cont-icons {
@@ -101,10 +111,7 @@
             margin-top: 30px;
             padding-bottom: 50px;
             width: 100%;
-        }
-
-        .my-flex-box-img li p {
-            width: 90%;
+            flex-direction: column-reverse;
         }
 
         table.iksweb {
@@ -113,15 +120,20 @@
             width: auto;
         }
 
-        .my-flex-box:nth-child(2) {
-            margin-top: 80px;
-            margin-left: 0;
+        .-img .my-flex-box:nth-child(2) {
             flex: auto;
-            margin-left: 75px;
+            margin: 45px 10px 0px 10px;
         }
 
         .-img::after {
             display: none;
+        }
+
+        .-img table.iksweb td {
+            border-bottom: 1px solid dimgray;
+            text-align: left;
+            height: 40px;
+            width: 80%;
         }
     }
 </style>

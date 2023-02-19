@@ -1,13 +1,32 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 <div class="my-flex-cont-img">
     <div class="my-flex-box-img">
-        <h1>
-            <?= $arSection["UF_BANNER_HEADER"] ?>
-        </h1>
+        <div class="head-desktop">
+            <h1><?= $arSection["UF_BANNER_HEADER"] ?> </h1>
+        </div>
+
+        <div class="head-mobile">
+            <div class="head-img">
+                <? $sPicture = CFile::GetPath($arSection['PICTURE']); ?>
+                <img src="<?= $sPicture ?>" alt="">
+            </div>
+            <div class="head-h1">
+                <h1><?= $arSection["UF_BANNER_HEADER"] ?></h1>
+                <p>Диагностика <?= $arSection["UF_AMOUNT"] ?></p>
+            </div>
+
+        </div>
+
         <ul>
-            <li><p>Диагностика длится 1-3 дня в зависимости от загруженности мастера</p></li>
-            <li><p>Стоимость диагностики <?= $arSection["UF_INSTR"] ?> <?= $arSection["UF_AMOUNT"] ?> р. в случае отказа от ремонта</p></li>
-            <li><p>Срок ремонта <?= $arSection["UF_INSTR"] ?> зависит от наличия запчастей, и начинается на этапе диагностики</p></li>
+            <li>
+                <p>Диагностика длится 1-3 дня в зависимости от загруженности мастеров.</p>
+            </li>
+            <li>
+                <p>Стоимость диагностики <?= $arSection["UF_AMOUNT"] ?> в случае отказа от ремонта.</p>
+            </li>
+            <li>
+                <p>Срок ремонта зависит от наличия запасных частей, если запчасти в наличие то, как правило, вместе с диагностикой и производится ремонт.</p>
+            </li>
         </ul>
         <div class="my-flex-cont-icons">
             <div class="my-flex-box-icons my-flex-box-cash">
@@ -29,6 +48,14 @@
 <style>
     #pagetitle {
         display: none;
+    }
+
+    .my-flex-box-img .head-mobile {
+        display: none;
+    }
+
+    .my-flex-box-img .head-desktop {
+        display: block;
     }
 
     h1 {
@@ -122,8 +149,6 @@
         flex: 2 1 auto;
     }
 
-    .my-flex-box-img:nth-child(2) {}
-
     .my-flex-box-img img {
         max-width: 390px;
     }
@@ -152,11 +177,48 @@
 
 
     @media (max-width: 720px) {
+        .container-345 {
+            padding: 40px 0px 0px 0px !important;
+        }
 
-        .my-flex-box:nth-child(1) {
-            flex: 0 1 65%;
-            margin-right: 40px;
-            margin-top: 80px;
+        .my-flex-cont-img {
+            margin: -80px 0px 0px 0px;
+        }
+
+        .my-flex-box-img .head-desktop {
+            display: none;
+        }
+
+        .my-flex-box-img .head-mobile {
+            display: flex;
+            align-items: center;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .my-flex-box-img .head-mobile h1 {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+            margin: 0;
+        }
+
+        .my-flex-box-img .head-mobile .head-h1 {
+            font-size: 19px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .my-flex-box-img .head-img img {
+            max-width: 140px;
+        }
+
+        .my-flex-box-img li p {
+            margin-left: 35px;
+            width: 90%;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
         }
 
         .my-flex-box-img:nth-child(2) {
@@ -166,36 +228,58 @@
         .my-flex-cont-icons {
             display: none;
         }
+    }
 
-        .-img {
-            flex-wrap: wrap;
+    @media (max-width: 1024px) {
+        .container-345 {
+            padding: 40px 0px 0px 0px !important;
+        }
+
+        .my-flex-cont-img {
+            margin: -80px 0px 0px 0px;
+        }
+
+        .my-flex-box-img .head-desktop {
+            display: none;
+        }
+
+        .my-flex-box-img .head-mobile {
             display: flex;
-            justify-content: center;
-            background-color: #393c4b;
-            color: #ffffff;
-            margin-top: 30px;
-            padding-bottom: 50px;
-            width: 100%;
+            align-items: center;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .my-flex-box-img .head-mobile h1 {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+            margin: 0;
+        }
+
+        .my-flex-box-img .head-mobile .head-h1 {
+            font-size: 19px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .my-flex-box-img .head-img img {
+            max-width: 140px;
         }
 
         .my-flex-box-img li p {
+            margin-left: 35px;
             width: 90%;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
         }
 
-        table.iksweb {
-            text-decoration: none;
-            border-collapse: collapse;
-            width: auto;
+        .my-flex-box-img:nth-child(2) {
+            display: none;
         }
 
-        .my-flex-box:nth-child(2) {
-            margin-top: 80px;
-            margin-left: 0;
-            flex: auto;
-            margin-left: 75px;
-        }
-
-         .-img::after {
+        .my-flex-cont-icons {
             display: none;
         }
     }
