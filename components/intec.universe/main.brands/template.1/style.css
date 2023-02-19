@@ -81,7 +81,8 @@
     padding-top: 10px;
 }
 
-.widget.c-brands.c-brands-template-1 .widget-item, .widget.c-brands.c-brands-template-1 .widget-item-wrapper {
+.widget.c-brands.c-brands-template-1 .widget-item,
+.widget.c-brands.c-brands-template-1 .widget-item-wrapper {
     display: block;
 }
 
@@ -90,9 +91,9 @@
 }
 
 @media all and (min-width: 1024px) {
-   .c-brands-template-1 .intec-content-wrapper-mobile {
-    display: none;
-}
+    .c-brands-template-1 .intec-content-wrapper-mobile {
+        display: none;
+    }
 }
 
 @media all and (max-width: 1024px) {
@@ -147,14 +148,14 @@
     }
 
     .c-brands-template-1 .intec-content-wrapper {
-        display: none;
+        display: none !important;
     }
 
     .c-brands-template-1 .intec-content-wrapper-mobile .widget-header {
         margin-left: 20px;
     }
 
-    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid > .intec-grid-item-5 {
+    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid>.intec-grid-item-5 {
         flex: 0 0 25% !important;
         max-width: 100% !important;
     }
@@ -163,7 +164,7 @@
         padding: 0 30px 24px 30px;
     }
 
-    .intec-template .widget.c-brands-template-1 .intec-content-wrapper-mobile .widget-header .widget-title.align-left  {
+    .intec-template .widget.c-brands-template-1 .intec-content-wrapper-mobile .widget-header .widget-title.align-left {
         text-align: center;
     }
 }
@@ -174,10 +175,10 @@
     }
 
     .c-brands-template-1 .intec-content-wrapper {
-        display: none;
+        display: none !important;
     }
 
-    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid > .intec-grid-item-5 {
+    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid>.intec-grid-item-5 {
         flex: 0 0 40% !important;
         max-width: 100% !important;
     }
@@ -216,7 +217,9 @@
     color: #2d2d2d !important;
 }
 
-.widget.c-brands.c-brands-template-1 .widget-footer-button:hover, .widget.c-brands.c-brands-template-1 .widget-footer-button:focus, .widget.c-brands.c-brands-template-1 .widget-footer-button:active {
+.widget.c-brands.c-brands-template-1 .widget-footer-button:hover,
+.widget.c-brands.c-brands-template-1 .widget-footer-button:focus,
+.widget.c-brands.c-brands-template-1 .widget-footer-button:active {
     color: #fff !important;
 }
 
@@ -298,7 +301,7 @@
         padding: 0 20px 24px 20px;
     }
 
-    .widget.c-brands.c-brands-template-1 .widget-content > div {
+    .widget.c-brands.c-brands-template-1 .widget-content>div {
         /* display: none; */
         width: 100%;
         -webkit-box-align: center !important;
@@ -310,12 +313,12 @@
     }
 
     .c-brands-template-1 .intec-content-wrapper {
-        display: none;
+        display: none !important;
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid > .intec-grid-item-5 {
+    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid>.intec-grid-item-5 {
         flex: 0 0 40% !important;
         max-width: 100% !important;
     }
@@ -354,10 +357,10 @@
     }
 
     .c-brands-template-1 .intec-content-wrapper {
-        display: none;
+        display: none !important;
     }
 
-    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid > .intec-grid-item-5 {
+    .c-brands-template-1 .intec-content-wrapper-mobile .intec-grid>.intec-grid-item-5 {
         flex: 0 0 40% !important;
         max-width: 100% !important;
     }
@@ -366,18 +369,18 @@
         padding: 0 30px 24px 30px;
     }
 
-    .intec-template .widget.c-brands-template-1 .intec-content-wrapper-mobile .widget-header .widget-title.align-left  {
+    .intec-template .widget.c-brands-template-1 .intec-content-wrapper-mobile .widget-header .widget-title.align-left {
         text-align: left;
     }
 }
 
-.intec-grid > .intec-grid-item-5 {
+.intec-grid>.intec-grid-item-5 {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
     max-width: 14%;
 }
 
-.intec-grid.intec-grid-i-15 > .intec-grid-item-5 {
+.intec-grid.intec-grid-i-15>.intec-grid-item-5 {
     padding-top: 0px;
     padding-bottom: 0px;
     padding-right: 0px;
