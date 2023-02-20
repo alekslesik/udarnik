@@ -14,9 +14,7 @@
                 <h1><?= $arSection["UF_BANNER_HEADER"] ?></h1>
                 <p>Диагностика <?= $arSection["UF_AMOUNT"] ?></p>
             </div>
-
         </div>
-
         <ul>
             <li>
                 <p>Диагностика длится 1-3 дня в зависимости от загруженности мастеров.</p>
@@ -33,7 +31,7 @@
                 <div class="my-flex-box-description">Наличные или карта для физичечких лиц.</div>
             </div>
             <div class="my-flex-box-icons my-flex-box-card">
-                <div class="my-flex-box-description">Безналичная оплата для юридических лиц</div>
+                <div class="my-flex-box-description">Безналичная оплата для юридических лиц.</div>
             </div>
         </div>
     </div>
@@ -175,64 +173,89 @@
         font-size: 30px;
     }
 
+    @media (max-width: 1024px) {
+        .container-345 {
+            padding: 40px 0px 0px 0px !important;
+        }
+
+        .my-flex-box-img {
+            flex: 0 1 auto;
+            align-self: flex-start;
+            width: 29%;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .my-flex-cont-img {
+            margin: -80px 0px 0px 0px;
+        }
+
+        .my-flex-box-img .head-desktop {
+            display: none;
+        }
+
+        .my-flex-box-img .head-mobile {
+            display: flex;
+            align-items: center;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .my-flex-box-img .head-mobile h1 {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+            margin: 0;
+        }
+
+        .my-flex-box-img .head-mobile .head-h1 {
+            font-size: 19px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .my-flex-box-img .head-img img {
+            max-width: 140px;
+        }
+
+        .my-flex-box-img li p {
+            margin-left: 35px;
+            width: 90%;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
+        }
+
+        .my-flex-box-img:nth-child(2) {
+            display: none;
+        }
+
+        .my-flex-cont-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            height: 65px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .container-345 .catalog-wrapper-2.intec-content-wrapper {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
 
     @media (max-width: 720px) {
         .container-345 {
             padding: 40px 0px 0px 0px !important;
         }
 
-        .my-flex-cont-img {
-            margin: -80px 0px 0px 0px;
-        }
-
-        .my-flex-box-img .head-desktop {
-            display: none;
-        }
-
-        .my-flex-box-img .head-mobile {
-            display: flex;
-            align-items: center;
-            margin: 0px 0px 20px 0px;
-        }
-
-        .my-flex-box-img .head-mobile h1 {
-            text-transform: uppercase;
-            font-size: 25px;
-            font-weight: bold;
-            position: relative;
-            margin: 0;
-        }
-
-        .my-flex-box-img .head-mobile .head-h1 {
-            font-size: 19px;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-
-        .my-flex-box-img .head-img img {
-            max-width: 140px;
-        }
-
-        .my-flex-box-img li p {
-            margin-left: 35px;
-            width: 90%;
-            font-size: 18px;
-            line-height: 22px;
-            font-weight: bold;
-        }
-
-        .my-flex-box-img:nth-child(2) {
-            display: none;
-        }
-
-        .my-flex-cont-icons {
-            display: none;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .container-345 {
-            padding: 40px 0px 0px 0px !important;
+        .my-flex-box-img {
+            flex: 0 1 auto;
+            align-self: flex-start;
+            width: 29%;
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         .my-flex-cont-img {
@@ -280,7 +303,18 @@
         }
 
         .my-flex-cont-icons {
-            display: none;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 130px;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .container-345 .catalog-wrapper-2.intec-content-wrapper {
+            margin-left: 0px;
+            margin-right: 0px;
         }
     }
 </style>

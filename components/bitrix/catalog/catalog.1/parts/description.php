@@ -17,7 +17,7 @@
         background-color: #393c4b;
         color: #ffffff;
         padding-bottom: 80px;
-        width: 107%;
+        width: 100%;
     }
 
     .-img::after {
@@ -96,10 +96,6 @@
             font-weight: bold;
             font-size: 17px;
             margin: 10px 10px 10px 10px;
-        }
-
-        .my-flex-cont-icons {
-            display: none;
         }
 
         .-img {
