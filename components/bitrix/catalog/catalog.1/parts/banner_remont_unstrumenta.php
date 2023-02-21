@@ -1,9 +1,19 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 <div class="my-flex-cont-img">
     <div class="my-flex-box-img">
-        <h1>
-            <?= $arSection["UF_BANNER_HEADER"] ?>
-        </h1>
+        <div class="head-desktop">
+            <h1><?= $arSection["UF_BANNER_HEADER"] ?> </h1>
+        </div>
+
+        <div class="head-mobile">
+            <div class="head-img">
+                <? $sPicture = CFile::GetPath($arSection['PICTURE']); ?>
+                <img src="<?= $sPicture ?>" alt="">
+            </div>
+            <div class="head-h1">
+                <h1><?= $arSection["UF_BANNER_HEADER"] ?></h1>
+            </div>
+        </div>
         <ul>
             <li>
                 <p>Ремонтируем все виды инструмента включая профессиональную технику.</p>
@@ -15,24 +25,18 @@
                 <p>Гарантия на все выполненные работы и на все используемые запчасти.</p>
             </li>
         </ul>
+        <div class="my-flex-cont-icons">
+            <div class="my-flex-box-icons my-flex-box-cash">
+                <div class="my-flex-box-description">Наличные или карта для физичечких лиц.</div>
+            </div>
+            <div class="my-flex-box-icons my-flex-box-card">
+                <div class="my-flex-box-description">Безналичная оплата для юридических лиц.</div>
+            </div>
+        </div>
     </div>
     <div class="my-flex-box-img">
         <? $sPicture = CFile::GetPath($arSection['PICTURE']); ?>
         <img src="<?= $sPicture ?>" alt="">
-    </div>
-</div>
-
-<div class="my-flex-cont-icons">
-    <div class="my-flex-box-icons my-flex-box-cash">
-        <div class="my-flex-box-description">Наличные или карта для физичечких лиц.</div>
-    </div>
-    <div class="my-flex-box-icons my-flex-box-card">
-        <div class="my-flex-box-description">Безналичная оплата для юридических лиц</div>
-    </div>
-    <div class="my-flex-box-icons">
-        <img class="flex-social" src="/local/templates/universe_s1/icons/whatsapp.png" alt="">
-        <img class="flex-social" src="/local/templates/universe_s1/icons/youtube.png" alt="">
-        <img class="flex-social" src="/local/templates/universe_s1/icons/instagram.png" alt="">
     </div>
 </div>
 
@@ -43,11 +47,19 @@
         display: none;
     }
 
+    .my-flex-box-img .head-mobile {
+        display: none;
+    }
+
+    .my-flex-box-img .head-desktop {
+        display: block;
+    }
+
     h1 {
         font-size: 38px;
         font-weight: bold;
         position: relative;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
         margin-top: 0;
     }
 
@@ -56,7 +68,7 @@
         justify-content: space-between;
         align-items: end;
         height: 65px;
-        margin-bottom: 50px;
+        width: 76%;
     }
 
     .my-flex-box-icons {
@@ -91,12 +103,12 @@
     }
 
     .my-flex-box-cash::before {
-        content: url('/local/templates/universe_s1/icons/money.png');
+        content: url('/local/templates/universe_s1/icons/iko1.png');
         margin-right: 30px;
     }
 
     .my-flex-box-card::before {
-        content: url('/local/templates/universe_s1/icons/money.png');
+        content: url('/local/templates/universe_s1/icons/iko1.png');
         margin-right: 30px
     }
 
@@ -121,22 +133,21 @@
         justify-content: space-between;
         align-items: stretch;
         color: #393c4b;
+        margin-bottom: 27px;
     }
 
     .my-flex-box-img {
         flex: 0 1 auto;
-        align-self: center;
-        width: 25%;
+        align-self: flex-start;
+        width: 29%;
     }
 
     .my-flex-box-img:nth-child(1) {
         flex: 2 1 auto;
     }
 
-    .my-flex-box-img:nth-child(2) {}
-
     .my-flex-box-img img {
-        max-width: 280px;
+        max-width: 390px;
     }
 
     .my-flex-box-img li {
@@ -145,9 +156,10 @@
 
     .my-flex-box-img li p {
         margin-left: 40px;
-        width: 80%;
+        width: 90%;
         font-size: 21px;
-        line-height: 28px;
+        line-height: 35px;
+        font-weight: bold;
     }
 
     .my-flex-box-img li:before {
@@ -160,12 +172,57 @@
         font-size: 30px;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 1024px) {
+        .container-345 {
+            padding: 40px 0px 0px 0px !important;
+        }
 
-        .my-flex-box:nth-child(1) {
-            flex: 0 1 65%;
-            margin-right: 40px;
-            margin-top: 80px;
+        .my-flex-box-img {
+            flex: 0 1 auto;
+            align-self: flex-start;
+            width: 29%;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .my-flex-cont-img {
+            margin: -80px 0px 0px 0px;
+        }
+
+        .my-flex-box-img .head-desktop {
+            display: none;
+        }
+
+        .my-flex-box-img .head-mobile {
+            display: flex;
+            align-items: center;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .my-flex-box-img .head-mobile h1 {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+            margin: 0;
+        }
+
+        .my-flex-box-img .head-mobile .head-h1 {
+            font-size: 19px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .my-flex-box-img .head-img img {
+            max-width: 140px;
+        }
+
+        .my-flex-box-img li p {
+            margin-left: 35px;
+            width: 90%;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
         }
 
         .my-flex-box-img:nth-child(2) {
@@ -173,39 +230,90 @@
         }
 
         .my-flex-cont-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            height: 65px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .container-345 .catalog-wrapper-2.intec-content-wrapper {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .container-345 {
+            padding: 40px 0px 0px 0px !important;
+        }
+
+        .my-flex-box-img {
+            flex: 0 1 auto;
+            align-self: flex-start;
+            width: 29%;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .my-flex-cont-img {
+            margin: -80px 0px 0px 0px;
+        }
+
+        .my-flex-box-img .head-desktop {
             display: none;
         }
 
-        .-img {
-            flex-wrap: wrap;
+        .my-flex-box-img .head-mobile {
             display: flex;
-            justify-content: center;
-            background-color: #393c4b;
-            color: #ffffff;
-            margin-top: 30px;
-            padding-bottom: 50px;
-            width: 100%;
+            align-items: center;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .my-flex-box-img .head-mobile h1 {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+            margin: 0;
+        }
+
+        .my-flex-box-img .head-mobile .head-h1 {
+            font-size: 19px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .my-flex-box-img .head-img img {
+            max-width: 140px;
         }
 
         .my-flex-box-img li p {
+            margin-left: 35px;
             width: 90%;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
         }
 
-        table.iksweb {
-            text-decoration: none;
-            border-collapse: collapse;
-            width: auto;
-        }
-
-        .my-flex-box:nth-child(2) {
-            margin-top: 80px;
-            margin-left: 0;
-            flex: auto;
-            margin-left: 75px;
-        }
-
-        .-img::after {
+        .my-flex-box-img:nth-child(2) {
             display: none;
+        }
+
+        .my-flex-cont-icons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 130px;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .container-345 .catalog-wrapper-2.intec-content-wrapper {
+            margin-left: 0px;
+            margin-right: 0px;
         }
     }
 </style>
