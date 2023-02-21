@@ -505,13 +505,15 @@ if ($arTags['SHOW']['MOBILE'] && $bSeo) {
                                     'catalog-description-top',
                                     'intec-ui-markup-text'
                                 ]) ?>">
-                        <?php if ($url == "/catalog/remont_instrumenta/") { ?>
-                        <? include(__DIR__ . '/parts/banner_remont_unstrumenta.php'); ?>
+                        <?php if ($url == "/catalog/remont_instrumenta/" 
+                                || $url == "/catalog/remont_silovoy_tekhniki/" 
+                                || $url =="/catalog/remont_sadovoy_tekhniki/"
+                                || $url =="/catalog/uslugi/") { ?>
+                            <? include(__DIR__ . '/parts/banner_remont_unstrumenta.php'); ?>
                         <?php } else { ?>
-                        <? include(__DIR__ . '/parts/banner_usluga.php'); ?>
-                        <? include(__DIR__ . '/parts/description.php'); ?>
+                            <? include(__DIR__ . '/parts/banner_usluga.php'); ?>
+                            <? include(__DIR__ . '/parts/description.php'); ?>
                         <?php } ?>
-
                     </div>
                     <?php $this->EndViewTarget() ?>
                 <?php } ?>
