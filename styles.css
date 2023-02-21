@@ -1,3 +1,12 @@
 .c-header.c-header-template-1 .widget-view.widget-view-fixed .widget-logotype img {
     content:url(/logo.png);
 }
+
+@media (max-width: 321px) {
+    .intec-content, .intec-content .intec-content.intec-content-primary {
+        min-width: 0px;
+    }
+    .head-mobile .head-img {
+        display: none;
+    }
+}
