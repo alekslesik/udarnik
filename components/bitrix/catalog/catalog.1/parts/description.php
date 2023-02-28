@@ -29,6 +29,7 @@
         clear: both;
         padding: 0 20px 0 20px;
         margin-top: 30px;
+        align-items: center;
     }
 
     .-img::after {
@@ -90,6 +91,7 @@
             flex-direction: column-reverse;
             width: 100%;
             margin-top: 30px;
+            align-items: normal;
         }
 
         .wrapper-img .my-flex-box:nth-child(2) {
@@ -121,6 +123,7 @@
             /* padding-bottom: 50px; */
             width: 100%;
             flex-direction: column-reverse;
+            align-items: normal;
         }
 
         table.iksweb {
