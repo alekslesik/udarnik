@@ -1,5 +1,6 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
-    <div class="-img">
+<div class="-img">
+    <div class="wrapper-img">
         <div class="my-flex-box">
             <?= $arDescription['VALUE'] ?>
         </div>
@@ -7,21 +8,31 @@
             <?= $arSection["UF_TABLE"] ?>
         </div>
     </div>
+</div>
 
 
 <style>
     /* Made by cssworld.ru */
     .-img {
-        display: flex;
-        justify-content: center;
         background-color: #393c4b;
         color: #ffffff;
         padding-bottom: 80px;
         width: 100%;
     }
 
+    .wrapper-img {
+        display: flex;
+        justify-content: center;
+        max-width: 1384px;
+        min-width: 320px;
+        margin: 0 auto;
+        clear: both;
+        padding: 0 20px 0 20px;
+        margin-top: 30px;
+    }
+
     .-img::after {
-        height: 420px;
+        display: none !important;
     }
 
     .my-flex-box {
@@ -62,7 +73,8 @@
 
     table.iksweb td,
     table.iksweb th {
-        border-bottom: 1px solid dimgray;;
+        border-bottom: 1px solid dimgray;
+        ;
         /* text-align: left; */
         height: 36px;
     }
@@ -74,12 +86,13 @@
     }
 
     @media (max-width: 1024px) {
-        .-img {
+        .wrapper-img {
             flex-direction: column-reverse;
             width: 100%;
+            margin-top: 30px;
         }
 
-        .-img .my-flex-box:nth-child(2) {
+        .wrapper-img .my-flex-box:nth-child(2) {
             flex: auto;
             margin: 45px 0px 0px 125px;
         }
@@ -98,14 +111,14 @@
             margin: 10px 10px 10px 10px;
         }
 
-        .-img {
+        .wrapper-img {
             flex-wrap: wrap;
             display: flex;
             justify-content: center;
             background-color: #393c4b;
             color: #ffffff;
-            margin-top: 30px;
-            padding-bottom: 50px;
+            margin-top: 70px;
+            /* padding-bottom: 50px; */
             width: 100%;
             flex-direction: column-reverse;
         }
@@ -116,16 +129,16 @@
             width: auto;
         }
 
-        .-img .my-flex-box:nth-child(2) {
+        .wrapper-img .my-flex-box:nth-child(2) {
             flex: auto;
             margin: 45px 10px 0px 10px;
         }
 
-        .-img::after {
+        .wrapper-img::after {
             display: none;
         }
 
-        .-img table.iksweb td {
+        .wrapper-img table.iksweb td {
             border-bottom: 1px solid dimgray;
             text-align: left;
             height: 40px;

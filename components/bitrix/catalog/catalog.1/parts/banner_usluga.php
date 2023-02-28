@@ -62,6 +62,7 @@
         position: relative;
         margin-bottom: 35px;
         margin-top: 0;
+        text-transform: uppercase;
     }
 
     .my-flex-cont-icons {
@@ -135,6 +136,21 @@
         align-items: stretch;
         color: #393c4b;
         margin-bottom: 27px;
+
+        max-width: 1384px;
+        min-width: 320px;
+        margin: 0 auto;
+        clear: both;
+        padding: 0 20px 0 20px;
+    }
+
+    .container-345.element-page .catalog-wrapper.intec-content.intec-content-visible {
+        max-width: 100%;
+    }
+
+    .container-345.element-page .catalog-wrapper-2.intec-content-wrapper {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .my-flex-box-img {

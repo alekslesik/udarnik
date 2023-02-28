@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Ремонт");
 $APPLICATION->SetTitle("Ремонт");
 
 ?>
-    <div class="container-345" style="margin: 0px auto 0px auto; padding: 0px 40px 0px 40px;">
+    <div class="container-345 element-page" style="margin: 0px 0px  0px 0px; padding: 0px 0px 0px 0px;">
         <? $APPLICATION->IncludeComponent(
             "bitrix:catalog",
             "catalog.1",
