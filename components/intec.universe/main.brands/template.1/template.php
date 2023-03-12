@@ -20,7 +20,7 @@ $arVisual = $arResult['VISUAL'];
 
 ?>
 <?= Html::beginTag('div', [
-    'id' => $sTemplateId,
+    'id' => 'i-18-intec-universe-main-brands-template-1-ZxlMNuLRZfyp',
     'class' => [
         'widget',
         'c-brands',

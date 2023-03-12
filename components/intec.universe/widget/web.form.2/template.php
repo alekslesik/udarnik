@@ -21,7 +21,7 @@ if (empty($arResult['WEB_FORM']))
 $sTemplateId = Html::getUniqueId(null, Component::getUniqueId($this));
 
 ?>
-<div class="widget-web-form-2 intec-cl-background" id="<?= $sTemplateId ?>" data-print="false">
+<div class="widget-web-form-2 intec-cl-background" id="i-20-intec-universe-widget-web-form-2-d1lqBc7LJePo" data-print="false">
     <div class="intec-content">
         <div class="intec-content-wrapper">
             <div class="widget-web-form-2-wrapper">
