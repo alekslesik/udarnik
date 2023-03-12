@@ -46,7 +46,12 @@
 @media all and (max-width: 768px) {
     .widget-web-form-2 .widget-web-form-2-wrapper {
         text-align: center;
+        padding: 50px 0;
     }
+    .widget-web-form-2 .widget-web-form-2-image {
+        top: 100%
+    }
+
 }
 
 @media (max-width: 768px) {
