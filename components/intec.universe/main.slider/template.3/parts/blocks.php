@@ -74,8 +74,8 @@ use intec\core\helpers\Html;
                     <?= Html::beginTag($sTag, [
                         'href' => $sTag === 'a' ? $arData['LINK']['VALUE'] : null,
                         'class' => 'widget-block-wrapper',
-                        'data-half' => $arItem['DATA']['WIDTH'] == 2 ? 'true' : 'false',
-                        'target' => $sTag === 'a' && $arData['LINK']['BLANK'] ? '_blank' : null
+                        'data-half' => $arItem['DATA']['WIDTH'] == 2 ? 'true' : 'false'
+                        // 'target' => $sTag === 'a' && $arData['LINK']['BLANK'] ? '_blank' : null
                     ]) ?>
                         <?= Html::tag('div', '', [
                             'class' => 'widget-block-picture',

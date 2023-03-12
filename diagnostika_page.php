@@ -305,6 +305,7 @@ $APPLICATION->SetTitle("Диагностика");
         table.iksweb td,
         table.iksweb th {
             height: 36px;
+            padding: 0px 10px 0;
         }
 
         table.iksweb td:nth-child(1n) {
