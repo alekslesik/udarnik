@@ -195,7 +195,7 @@ $APPLICATION->SetTitle("Добро пожаловать в сервисный ц
 			}
 		}
 	</style>
-	<div class="container-572" style="margin: 9px auto 0px auto; padding: 60px 40px 55px 40px; background-color: #F4F4F4;">
+	<div class="container-572" style="margin: 0px 0px 0px 0px; padding: 60px 0px 40px 0px; background-color: #F4F4F4;">
         <? $APPLICATION->IncludeComponent(
             "intec.universe:main.advantages",
             "template.2",
@@ -240,7 +240,7 @@ $APPLICATION->SetTitle("Добро пожаловать в сервисный ц
             )
         ); ?>
     </div>
-    <div class="container-572" style="margin: 0px auto 0px auto; padding: 60px 40px 65px 40px;">
+    <div class="container-572" style="margin: 0px 0px 0px 0px; padding: 60px 0px 40px 0px;">
         <? $APPLICATION->IncludeComponent(
     "intec.universe:main.brands", 
     "template.1", 
@@ -278,7 +278,7 @@ $APPLICATION->SetTitle("Добро пожаловать в сервисный ц
     false
 ); ?>
     </div>
-    <div class="container-572" style="margin: 0px auto 0px auto; padding: 60px 40px 90px 40px; background-color: #F4F4F4;">
+    <div class="container-572" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; background-color: #F4F4F4;">
         <? $APPLICATION->IncludeComponent(
             "intec.universe:main.services",
             "template.8",
@@ -308,7 +308,7 @@ $APPLICATION->SetTitle("Добро пожаловать в сервисный ц
             )
         ); ?>
     </div>
-    <div class="container-572">
+    <div class="container-572" style="margin: 0px 0px 0px 0px; padding: 40px 0px 0px 0px; background-color: #F4F4F4;">
         <? $APPLICATION->IncludeComponent(
             "intec.universe:widget",
             "web.form.2",
@@ -326,7 +326,7 @@ $APPLICATION->SetTitle("Добро пожаловать в сервисный ц
             )
         ); ?>
     </div>
-    <div class="container-572" style="margin: 0px auto 0px auto; padding: 60px 40px 90px 40px;">
+    <div class="container-572" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">
         <? $APPLICATION->IncludeComponent(
     "intec.universe:main.reviews", 
     "template.13", 
@@ -370,7 +370,7 @@ $APPLICATION->SetTitle("Добро пожаловать в сервисный ц
     false
 ); ?>
     </div>
-    <div class="container-572">
+    <div class="container-572" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">
         <? $APPLICATION->IncludeComponent(
             "bitrix:main.include",
             "",
