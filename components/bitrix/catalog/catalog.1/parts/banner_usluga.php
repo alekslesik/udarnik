@@ -290,20 +290,20 @@
 
         .my-flex-box-img .head-mobile h1 {
             text-transform: uppercase;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: bold;
             position: relative;
             margin: 0;
         }
 
         .my-flex-box-img .head-mobile .head-h1 {
-            font-size: 19px;
+            font-size: 16px;
             font-weight: bold;
             margin-left: 10px;
         }
 
         .my-flex-box-img .head-img img {
-            max-width: 140px;
+            max-width: 92px;
         }
 
         .my-flex-box-img li p {

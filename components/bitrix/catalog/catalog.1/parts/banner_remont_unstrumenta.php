@@ -286,7 +286,7 @@
         }
 
         .my-flex-box-img .head-img img {
-            max-width: 140px;
+            max-width: 92px;
         }
 
         .my-flex-box-img li p {

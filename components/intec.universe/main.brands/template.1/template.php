@@ -198,7 +198,7 @@ $arVisual = $arResult['VISUAL'];
 <div class="widget-wrapper-2 intec-content-wrapper-mobile">
             <?php if ($arBlocks['HEADER']['SHOW'] || $arBlocks['DESCRIPTION']['SHOW']) { ?>
                 <div class="widget-header">
-                    <div class="intec-grid intec-grid-wrap intec-grid-a-v-center intec-grid-i-8">
+                    <div class="intec-grid intec-grid-wrap intec-grid-a-v-center">
                         <?php if ($arBlocks['HEADER']['SHOW']) { ?>
                             <div class="intec-grid-item">
                                 <?= Html::tag('div', Html::encode($arBlocks['HEADER']['TEXT']), [
