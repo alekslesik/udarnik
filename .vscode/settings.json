@@ -1,0 +1,16 @@
+{
+    "deploy": {
+        "targets": [
+            {
+                "type": "ftp",
+                "name": "udarnik",
+                "description": "udarnik",
+
+                "dir": "/local/templates/universe_s1",
+                "host": "udarnik.devbx.ru", "port": 21,
+                "secure": false,
+                "user": "udarnick", "password": "cY6fY6jZ2v"
+            }
+        ]
+    }
+}

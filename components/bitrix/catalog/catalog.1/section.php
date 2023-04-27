@@ -516,6 +516,22 @@ if ($arTags['SHOW']['MOBILE'] && $bSeo) {
                         <?php } ?>
                     </div>
                     <?php $this->EndViewTarget() ?>
+                <?php } else { ?>
+                    <?php
+                    $url = $_SERVER['REQUEST_URI'];
+                    $url = explode('?', $url);
+                    $url = $url[0];
+                    ?>
+                    <?php $this->SetViewTarget($sTemplateId . '-description-top') ?>
+                    <div class="<?= Html::cssClassFromArray([
+                                    'catalog-description',
+                                    'catalog-description-top',
+                                    'intec-ui-markup-text',
+                                    'catalog-description-other',
+                                ]) ?>">
+                            <? include(__DIR__ . '/parts/description_other.php'); ?>
+                    </div>
+                    <?php $this->EndViewTarget() ?>
                 <?php } ?>
                 <?php if (!empty($arSeo) && !empty($arSeo['META']['descriptionBottom']) || $arDescription['SHOW'] && $arDescription['POSITION'] === 'bottom') { ?>
                     <?php $this->SetViewTarget($sTemplateId . '-description-bottom') ?>
