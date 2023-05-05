@@ -31,7 +31,7 @@
             clear: both;
             padding: 0 20px 0 20px;
             margin-top: 30px;
-            align-items: center;
+            align-items: baseline;
         }
 
         .-img::after {
@@ -61,7 +61,7 @@
         table.iksweb {
             text-decoration: none;
             border-collapse: collapse;
-            width: 77%;
+            width: 100%;
         }
 
         table.iksweb th {
