@@ -16,3 +16,23 @@
 	height: 940px;
 }
 }
+
+.menu-column-item-link.intec-cl-text-hover[href="/contacts/"] {
+	font-weight: bold;
+	color: white !importatn;
+}
+
+.ns-bitrix.c-menu.c-menu-columns-1 .menu-column-item-link[href="/contacts/"] {
+	font-weight: bold;
+	color: white !important;
+}
+
+.my-flex-box:nth-child(2) {
+  flex: 1 1 35%;
+  margin-left: 40px;
+  margin-top: 60px;
+}
+
+.wrapper-img {
+	align-items: start;
+}
