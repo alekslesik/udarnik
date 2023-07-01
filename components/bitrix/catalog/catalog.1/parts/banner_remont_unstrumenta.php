@@ -1,5 +1,5 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
-<div class="my-flex-cont-img">
+<!-- <div class="my-flex-cont-img">
     <div class="my-flex-box-img">
         <div class="head-desktop">
             <h1><?= $arSection["UF_BANNER_HEADER"] ?> </h1>
@@ -38,7 +38,7 @@
         <? $sPicture = CFile::GetPath($arSection['PICTURE']); ?>
         <img src="<?= $sPicture ?>" alt="">
     </div>
-</div>
+</div> -->
 
 <!-- <hr class="hr-shelf"> -->
 
