@@ -72,6 +72,9 @@
 .ns-bitrix.c-menu.c-menu-horizontal-1 .menu-item .menu-item-text.menu-item-catalog-text {
     text-align: left;
     padding-right: 35px;
+    pointer-events: none; /* делаем элемент неактивным для взаимодействия */
+    cursor: default; /*  курсор в виде стрелки */
+    color: #888;/* цвет текста серый */
 }
 .ns-bitrix.c-menu.c-menu-horizontal-1 .menu-item-text .menu-item-text-icon {
     display: inline-block;
