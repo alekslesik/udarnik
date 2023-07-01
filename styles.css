@@ -10,3 +10,9 @@
         display: none;
     }
 }
+
+menu-item-text intec-grid intec-grid-a-v-center intec-grid-a-h-center menu-item-catalog-text {
+	pointer-events: none;
+	cursor: default;
+	color: #888;
+}

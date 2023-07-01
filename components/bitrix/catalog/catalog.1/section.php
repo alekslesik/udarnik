@@ -505,6 +505,7 @@ if ($arTags['SHOW']['MOBILE'] && $bSeo) {
                                     'catalog-description-top',
                                     'intec-ui-markup-text'
                                 ]) ?>">
+                                
                         <?php if ($url == "/catalog/remont_instrumenta/" 
                                 || $url == "/catalog/remont_silovoy_tekhniki/" 
                                 || $url =="/catalog/remont_sadovoy_tekhniki/"
